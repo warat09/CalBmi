@@ -5,7 +5,7 @@ function getRealTime() {
   var d = new Date(currentTime)
   var time = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
   console.log(time)
-  if(d.getMinutes() == "19" && d.getSeconds() == "0"){
+  if(d.getMinutes() == "43" && d.getSeconds() == "0"){
       console.log("hello")
       var templateParams = {
         name: 'ytitile7797@gmail.com',
