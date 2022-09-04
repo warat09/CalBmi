@@ -6,6 +6,24 @@ on:
 permissions: 
   contents: write
 jobs:
+      install-and-test:
+        runs-on: ubuntu-latest
+
+        strategy:
+          matrix:
+            node-version: [18.x]
+
+        steps:
+          - uses: actions/checkout@master
+
+          - name: Set up Node.js ${{ matrix.node-version }}
+            uses: actions/setup-node@master
+            with:
+              node-version: ${{ matrix.node-version }}
+
+          - name: Install packages
+            run: yarn install --frozen-lockfile
+                
       build-and-deploy:
         needs: install-and-test
         concurrency: ci-${{ github.ref }} # Recommended if you intend to make multiple deployments in quick succession.
