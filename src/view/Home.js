@@ -1,57 +1,37 @@
-import * as React from "react";
-import emailjs from 'emailjs-com';
-function getRealTime() {
-  const currentTime = Date.now();
-  var d = new Date(currentTime)
-  var time = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
-  console.log(time)
-  if(d.getMinutes() == "43" && d.getSeconds() == "0"){
-      console.log("hello")
-      var templateParams = {
-        name: 'ytitile7797@gmail.com',
-        subject: 'Check this out!',
-        message:'hello sig'
-
-    };
-
-    emailjs.send('service_9y5vii1', 'template_y5p8guz', templateParams, '0WTwQ785q4wjqSYDp')
-        .then((result) => {
-            console.log(result.text);
-        }, (error) => {
-            console.log(error.text);
-        });
-  }
-  return (Math.floor(currentTime / 1000) + 1) * 1000 - currentTime;
-}
-
-(async function () {
-  let reduceTime = 0;
-  while (true) {
-    reduceTime = getRealTime();
-    await sleep(reduceTime);
-  }
-})()
-
-function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
-async function sendEmail(e){
-  e.preventDefault();
-  console.log(e.target)
-
-  // emailjs.sendForm('service_9y5vii1', 'template_y5p8guz', e.target, '0WTwQ785q4wjqSYDp')
-  //     .then((result) => {
-  //         console.log(result.text);
-  //     }, (error) => {
-  //         console.log(error.text);
-  //     });
-  //     e.target.reset()
-}
+import React, { useState } from 'react';
 
 function Home() {
+    const[input, setinput] = useState({email:'',weight:0,height:0});
+  const handleSubmit  = (e) => {
+    localStorage.setItem('user', JSON.stringify(input));
+    e.preventDefault();
+    e.target.reset()
+  }
+  const inputsHandler = (e) =>{
+    setinput({...input,[e.target.name]: e.target.value });
+    e.preventDefault();
+  }
   return (
     <div>
         Home
+      <div className="container">
+        <form onSubmit={handleSubmit}>
+            <div className="row pt-5 mx-auto">
+            <div className="col-8 form-group pt-2 mx-auto">
+                    <input type="email" className="form-control" placeholder="อีเมล" name="email" onChange={inputsHandler}/>
+                </div>
+                <div className="col-8 form-group mx-auto">
+                    <input type="number" className="form-control" placeholder="น้ำหนัก" name="weight" onChange={inputsHandler}/>
+                </div>
+                <div className="col-8 form-group pt-2 mx-auto">
+                    <input type="number" className="form-control" placeholder="ส่วนสูง" name="height" onChange={inputsHandler}/>
+                </div>
+                <div className="col-8 pt-3 mx-auto">
+                    <input type="submit" className="btn btn-info" value="submit"></input>
+                </div>
+            </div>
+        </form>
+      </div>
     </div>
   );
 }

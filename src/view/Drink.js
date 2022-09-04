@@ -3,28 +3,39 @@ import emailjs from 'emailjs-com';
 import { render } from "@testing-library/react";
 
 
-// function getRealTime() {
-//     const currentTime = Date.now();
-//     var d = new Date(currentTime)
-//     var time = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
-//     console.log(time)
-//     if(d.getMinutes() == "27" && d.getSeconds() == "0"){
-//         console.log("hello")
-//     }
-//     return (Math.floor(currentTime / 1000) + 1) * 1000 - currentTime;
-//   }
+function getRealTime() {
+    const currentTime = Date.now();
+    var d = new Date(currentTime)
+    var time = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+    console.log(time)
+    if(d.getMinutes() == "58" && d.getSeconds() == "0"){
+        console.log("hello")
+        var templateParams = {
+            name: 'ytitile7797@gmail.com',
+            subject: 'Check this out!',
+            message:'hello sig'
+        };
+        emailjs.send('service_9y5vii1', 'template_y5p8guz', templateParams, '0WTwQ785q4wjqSYDp')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+    }
+    return (Math.floor(currentTime / 1000) + 1) * 1000 - currentTime;
+  }
   
-//   (async function () {
-//     let reduceTime = 0;
-//     while (true) {
-//       reduceTime = getRealTime();
-//       await sleep(reduceTime);
-//     }
-//   })()
+  (async function () {
+    let reduceTime = 0;
+    while (true) {
+      reduceTime = getRealTime();
+      await sleep(reduceTime);
+    }
+  })()
   
-//   function sleep(ms) {
-//     return new Promise(resolve => setTimeout(resolve, ms));
-//   }
+  function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
 async function sendEmail(e){
     e.preventDefault();
     var templateParams = {
@@ -44,9 +55,9 @@ async function sendEmail(e){
 }
 function Drink() {
   return (
-    <div>
+<div>
     <div className="container">
-    <form onSubmit={sendEmail}>
+        <form onSubmit={sendEmail}>
             <div className="row pt-5 mx-auto">
                 <div className="col-8 form-group mx-auto">
                     <input type="text" className="form-control" placeholder="Name" name="name"/>
