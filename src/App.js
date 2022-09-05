@@ -9,15 +9,15 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <NavLink to="/">Home</NavLink>
-      <NavLink to="Bmi">Bmi</NavLink>
-      <NavLink to="Drink">Drink</NavLink>
-      <NavLink to="Exercise">Exercise</NavLink>
+      <NavLink to="CalBmi">Home</NavLink>
+      <NavLink to="CalBmi/Bmi">Bmi</NavLink>
+      <NavLink to="CalBmi/Drink">Drink</NavLink>
+      <NavLink to="CalBmi/Exercise">Exercise</NavLink>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="Bmi" element={<Bmi />} />
-          <Route path="Drink" element={<Drink />} />
-          <Route path="Exercise" element={<Exercise />} />
+          <Route path="CalBmi" element={<Home />} />
+          <Route path="CalBmi/Bmi" element={<Bmi />} />
+          <Route path="CalBmi/Drink" element={<Drink />} />
+          <Route path="CalBmi/Exercise" element={<Exercise />} />
         </Routes>
     </div>
   );
