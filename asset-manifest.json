@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/CalBmi/static/css/main.073c9b0a.css",
-    "main.js": "/CalBmi/static/js/main.ceb85797.js",
+    "main.js": "/CalBmi/static/js/main.c79882d1.js",
     "static/js/787.bda1ff78.chunk.js": "/CalBmi/static/js/787.bda1ff78.chunk.js",
     "index.html": "/CalBmi/index.html",
     "main.073c9b0a.css.map": "/CalBmi/static/css/main.073c9b0a.css.map",
-    "main.ceb85797.js.map": "/CalBmi/static/js/main.ceb85797.js.map",
+    "main.c79882d1.js.map": "/CalBmi/static/js/main.c79882d1.js.map",
     "787.bda1ff78.chunk.js.map": "/CalBmi/static/js/787.bda1ff78.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.ceb85797.js"
+    "static/js/main.c79882d1.js"
   ]
 }
