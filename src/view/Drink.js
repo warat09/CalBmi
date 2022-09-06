@@ -35,20 +35,7 @@ function Drink() {
         }
         
         setDate(time)
-        if(d.getMinutes() == "58" && d.getSeconds() == "00"){
-            console.log("hello")
-            var templateParams = {
-                name: 'ytitile7797@gmail.com',
-                subject: 'Check this out!',
-                message:'hello sig'
-            };
-            emailjs.send('service_9y5vii1', 'template_y5p8guz', templateParams, '0WTwQ785q4wjqSYDp')
-                .then((result) => {
-                    console.log(result.text);
-                }, (error) => {
-                    console.log(error.text);
-                });
-        }
+        
         return (Math.floor(currentTime / 1000) + 1) * 1000 - currentTime;
       }
        
@@ -67,6 +54,22 @@ function Drink() {
       else if(date2==80000){
         setsleep(false)
       }
+      // console.log(date2)
+      // console.log(date)
+      if(date2==121940){
+          console.log("hello")
+          var templateParams = {
+              name: 'earthgodna@gmail.com',
+              subject: 'Check this out!',
+              message:'hello'
+            };
+          emailjs.send('service_9y5vii1', 'template_y5p8guz', templateParams, '0WTwQ785q4wjqSYDp')
+              .then((result) => {
+                  console.log(result.text);
+              }, (error) => {
+                  console.log(error.text);
+             });
+        }
     },[date])
   return (
 <div>
