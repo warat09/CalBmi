@@ -9,6 +9,7 @@ function Home() {
   const arref = useRef(ar)
   useEffect(()=>{
     arref.current = ar
+    console.log(ar)
   },[ar])
   const handlecheck =async ()=>{
     try{
@@ -44,7 +45,7 @@ function Home() {
         if(snapshot.exists()){
           console.log(snapshot.val())
           for(let i = 0;i<snapshot.val().length;i++){
-            temp.push(snapshot.val()[i])
+            temp.push(i)
           }
           console.log(temp)
           const num = temp.length
