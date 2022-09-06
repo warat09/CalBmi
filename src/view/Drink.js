@@ -7,11 +7,29 @@ import water3 from './../images/water3.png'
 import water2 from './../images/water2.png'
 import water1 from './../images/water1.png'
 import Drinkcss from './../css/Drinkcss.css'
+import ms from './../utils/firebase'
 function Drink() {
+    const saved = localStorage.getItem("user");
     var firsttime = new Date(Date.now());
     const [date, setDate] = useState(firsttime.getHours() + ":" +firsttime.getMinutes() + ":" +firsttime.getSeconds());
     const [date2,setdate2] = useState(0)
     const [sleep,setsleep] =useState(false)
+    // ms.getToken({vapidKey: "BAB2qXFJHhvTs3tjcAFzMsQS2AKNQmVAGgGCZ762VzSRRrJkN4DOS-IG_8vb-LUi2mqtgcLerg4iMOb3kDJB57U"});
+    // function requestPermission() {
+    //   console.log('Requesting permission...');
+    //   Notification.requestPermission().then((permission) => {
+    //     if (permission === 'granted') {
+    //       console.log('Notification permission granted.');
+    //     }
+    //   })
+    // }
+    // useEffect(()=>{
+    //   ms.requestPermission().then(()=>{
+    //     return ms.getToken();
+    //   }).then((data)=>{
+    //     console.log("token",data)
+    //   })
+    // })
     function getRealTime() {
         const currentTime = Date.now();
         var d = new Date(currentTime)
@@ -56,12 +74,12 @@ function Drink() {
       }
       // console.log(date2)
       // console.log(date)
-      if(date2==121940){
+      if(date2==131500){
           console.log("hello")
           var templateParams = {
               name: 'earthgodna@gmail.com',
               subject: 'Check this out!',
-              message:'hello'
+              message:'ถึงเวลาดื่มน้ำ'
             };
           emailjs.send('service_9y5vii1', 'template_y5p8guz', templateParams, '0WTwQ785q4wjqSYDp')
               .then((result) => {
