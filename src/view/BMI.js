@@ -1,4 +1,6 @@
 import * as React from "react";
+import {Container} from 'reactstrap';
+import '../css/BMI.css'
 
 function Bmi() {
   const saved = localStorage.getItem("user");
@@ -24,12 +26,16 @@ function Bmi() {
   }
   return (
     <div>
-      <h1>คำนวณหาค่าดัชนีมวลกาย (BMI)</h1>
-      <p>Email:{initial.email}</p>
-      <p>Weight:{initial.weight}</p>
-      <p>Height:{initial.height}</p>
-      <p>Bmi:{bmi}</p>
-      <p>คุณอยู่ในเกณฑ์: {status}</p>
+      <div className="header">
+        <h1>คำนวณหาค่าดัชนีมวลกาย (BMI)</h1>
+      </div>
+      <Container>
+        <p>Email:{initial.email}</p>
+        <p>Weight:{initial.weight}</p>
+        <p>Height:{initial.height}</p>
+        <p>Bmi:{bmi}</p>
+        <p>คุณอยู่ในเกณฑ์: {status}</p>
+      </Container>
     </div>
   );
 }
