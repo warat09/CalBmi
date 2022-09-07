@@ -4,20 +4,22 @@ import Home from "./view/Home";
 import Bmi from "./view/BMI";
 import Drink from "./view/Drink";
 import Exercise from "./view/Exercise";
+import Food from "./view/Food";
+import Mood from "./view/mood";
+import Navigation from "./view/navbar";
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <NavLink to="CalBmi">Home</NavLink>
-      <NavLink to="CalBmi/Bmi">Bmi</NavLink>
-      <NavLink to="CalBmi/Drink">Drink</NavLink>
-      <NavLink to="CalBmi/Exercise">Exercise</NavLink>
+    <div>
+      <Navigation/>
         <Routes>
-          <Route path="CalBmi" element={<Home />} />
-          <Route path="CalBmi/Bmi" element={<Bmi />} />
-          <Route path="CalBmi/Drink" element={<Drink />} />
-          <Route path="CalBmi/Exercise" element={<Exercise />} />
+          <Route path="/" element={<Home />} />
+          <Route path="Bmi" element={<Bmi />} />
+          <Route path="Drink" element={<Drink />} />
+          <Route path="Exercise" element={<Exercise />} />
+          <Route path="Food" element={<Food />} />
+          <Route path="Mood" element={<Mood />} />
         </Routes>
     </div>
   );
