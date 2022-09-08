@@ -1,11 +1,23 @@
 .header {
     /* background-image: linear-gradient(to right, #4152A5 , #F197A4); */
     background-image: linear-gradient(to bottom , #4152a5 , #00d4ff);
-
+    height: 5rem; 
     color: #ffffff;
-    padding: 15px;
+    padding: 1.4rem;
+    /* size:5rem; */
+    /* font-size: 4rem; */
 }
 .header h1{
     text-align: center;
+    font-size: 10 rem;
+
+    /* color:red; */
 }
-  
+.data {
+    text-align: center;
+    /* color: #ffffff; */
+
+}
+p{
+    size: 0.5 rem;
+}

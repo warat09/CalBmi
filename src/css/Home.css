@@ -1,0 +1,38 @@
+.container{
+    /* background-color:#F197A4; */
+}
+.form-control{
+    padding: 5px;
+    margin: 5px;
+
+}
+.btn-btn-info{
+    display: block;
+    margin:auto;
+    /* width:40%; */
+    border-radius: 4px;
+    
+    background-color:#4152A5;
+}
+.Header2{
+    margin:auto;
+    display: block;
+    text-align: center;
+    height: 80%;
+    font-size:14px !important;
+    /* box-shadow: 5px;; */
+    padding: 5px;
+    color:rgba(0, 0, 0, 0.641)
+}
+.Header{
+    margin:auto;
+    display: block;
+    text-align: center;
+    height: 100%;
+    font-size:30px;
+    /* box-shadow: 5px;; */
+    padding: 5px;
+    /* color:#0dcaf0 */
+}
+
+
