@@ -10,6 +10,7 @@ import Navigation from "./view/navbar";
 import './App.css';
 
 function App() {
+  
   return (
     <div className = "app">
       {window.location.href.split("/")[window.location.href.split("/").length-1]!=="" &&<Navigation/>}
