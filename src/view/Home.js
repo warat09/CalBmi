@@ -1,9 +1,11 @@
 import React, { useState,useRef, useEffect } from 'react';
 import {ref,set,get,child,onValue,update} from "firebase/database"
 import db from '../utils/firebase';
+import {Container} from 'reactstrap';
+import '../css/Home.css'
 function Home() {
   
-  const[input, setinput] = useState({email:'',weight:0,height:0});
+  const[input, setinput] = useState({email:'',weight:0,height:0,gender:'Male'});
   
   const[ar,setar] = useState([])
   const arref = useRef(ar)
@@ -82,11 +84,23 @@ function Home() {
   }
   return (
     <div>
-        Home
-      <div className="container">
+      <div className="header">
+        <h1>กรอกข้อมูลส่วนตัว (Personal Information)</h1>
+      </div>
+      <Container>
         <form onSubmit={handleSubmit}>
             <div className="row pt-5 mx-auto">
-            <div className="col-8 form-group pt-2 mx-auto">
+              <div className="col-8 form-group pt-2 mx-auto">
+                <label>
+                  <input type="radio" value="Male" name="gender" onChange={inputsHandler} defaultChecked/>
+                  <img src={'https://via.placeholder.com/40x60/0bf/fff&text=M'} />
+                </label>
+                <label>
+                  <input type="radio" value="Female" name="gender" onChange={inputsHandler}/>
+                  <img src={'https://via.placeholder.com/40x60/b0f/fff&text=F'} />
+                </label>
+              </div>
+              <div className="col-8 form-group pt-2 mx-auto">
                     <input type="email" className="form-control" placeholder="อีเมล" name="email" onChange={inputsHandler}/>
                 </div>
                 <div className="col-8 form-group mx-auto">
@@ -101,7 +115,7 @@ function Home() {
             </div>
         </form>
         <button onClick={handlecheck}>checkdb</button>
-      </div>
+      </Container>
     </div>
   );
 }

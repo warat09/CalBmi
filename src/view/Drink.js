@@ -8,6 +8,7 @@ import water2 from './../images/water2.png'
 import water1 from './../images/water1.png'
 import Drinkcss from './../css/Drinkcss.css'
 import ms from './../utils/firebase'
+import {Container} from 'reactstrap';
 function Drink() {
     const saved = localStorage.getItem("user");
     var firsttime = new Date(Date.now());
@@ -91,10 +92,11 @@ function Drink() {
     },[date])
   return (
 <div>
-    <div className="container">
-        <h1>Drink</h1>
-        
-     
+    <div className="header">
+      <h1>การดื่มน้ำ (DRINK)</h1>
+    </div>
+    <Container>
+      <h1>{date}</h1>     
         {date2>=80000&&date2<110000&&
           <div className='waterbottlediv'>
             <img src={water4} className='waterbottle' alt="logo"/>
@@ -125,8 +127,7 @@ function Drink() {
             <img src={emptybottle} className='waterbottle' alt="logo"/>
           </div>
         }
-           <h1>{date}</h1>
-    </div>
+    </Container>
 </div>
   );
 }

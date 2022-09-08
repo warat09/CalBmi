@@ -1,9 +1,15 @@
 import * as React from "react";
+import {Container} from 'reactstrap';
 
 function Food() {
   return (
     <div>
-      <h1>Food</h1>
+      <div className="header">
+        <h1>อาหาร (FOOD)</h1>
+      </div>
+      <Container>
+
+      </Container>
     </div>
   );
 }
