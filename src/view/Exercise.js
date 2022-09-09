@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
+import {Container} from 'reactstrap';
 
 function Exercise() {
     
@@ -79,12 +80,17 @@ function Exercise() {
     }
   
     return (
-        <div className="App">
-            <h2>{timer}</h2>
-            <button onClick={onClickStart}>Start</button>
-            <button onClick={onClickStarto}>Startต่อ</button>
-            <button onClick={onClickStop}>Stop</button>
-            <button onClick={onClickReset}>Reset</button>
+        <div>
+            <div className="header">
+                <h1>ออกกำลังกาย (EXERCISE)</h1>
+            </div>
+            <Container>
+                <h1>{timer}</h1>
+                <button onClick={onClickStart}>Start</button>
+                <button onClick={onClickStarto}>Startต่อ</button>
+                <button onClick={onClickStop}>Stop</button>
+                <button onClick={onClickReset}>Reset</button>
+            </Container>
         </div>
     )
 }

@@ -5,6 +5,7 @@ import '../css/BMI.css'
 function Bmi() {
   const saved = localStorage.getItem("user");
   const initial = JSON.parse(saved);
+  var gender = initial.gender
   var weight = parseInt(initial.weight)
   var height = parseInt(initial.height)/100
   var bmi = weight/Math.pow(height,2)
@@ -32,6 +33,7 @@ function Bmi() {
       <Container>
         <h1 className = "data">ข้อมูลของผู้ใช้</h1>
         <p>Email:{initial.email}</p>
+        <p>Gender:{gender}</p>
         <p>Weight:{initial.weight}</p>
         <p>Height:{initial.height}</p>
         <p>Bmi:{bmi}</p>
