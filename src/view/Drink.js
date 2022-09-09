@@ -64,18 +64,19 @@ function Drink() {
         return () => {
           clearInterval(timerID);
         };
+        
       }, []);
     useEffect(()=>{
       setdate2(parseInt(date.split(":")[0].concat(date.split(":")[1].concat(date.split(":")[2]))))
-      if(date2==200001){
+      if((date2>=200001&&date2<240000)||(date2>=0&&date2<80000)){
         setsleep(true)
       }
-      else if(date2==80000){
+      else if(date2>=80000){
         setsleep(false)
       }
       // console.log(date2)
       // console.log(date)
-      if(date2==131500){
+      if(date2===131500){
           console.log("hello")
           var templateParams = {
               name: 'earthgodna@gmail.com',
@@ -107,7 +108,7 @@ function Drink() {
             <img src={water3} className='waterbottle' alt="logo"/>
           </div>
         }
-        {date2>0&&date2<80000&&sleep==true&&
+        {sleep==true&&
           <div className='waterbottlediv'>
             <img src={water5} className='waterbottle' alt="logo"/>
           </div>

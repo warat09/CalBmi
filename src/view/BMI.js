@@ -30,7 +30,8 @@ function Bmi() {
       <div className="header">
         <h1>คำนวณหาค่าดัชนีมวลกาย (BMI)</h1>
       </div>
-      <Container>  
+      <Container>
+        <h1 className = "data">ข้อมูลของผู้ใช้</h1>
         <p>Email:{initial.email}</p>
         <p>Gender:{gender}</p>
         <p>Weight:{initial.weight}</p>
