@@ -10,11 +10,12 @@ import Navigation from "./view/navbar";
 import './App.css';
 
 function App() {
+  
   return (
-    <div>
-      <Navigation/>
+    <div className = "app">
+      {window.location.href.split("/")[window.location.href.split("/").length-1]!=="" &&<Navigation/>}
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route exact path="/" element={<Home />} />
           <Route path="Bmi" element={<Bmi />} />
           <Route path="Drink" element={<Drink />} />
           <Route path="Exercise" element={<Exercise />} />
