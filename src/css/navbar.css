@@ -1,8 +1,8 @@
 .nav{
-    --bs-nav-link-color:#191919 !important;
+    --bs-nav-link-color:#4152A5 !important;
 }
 .nav{
-    --bs-nav-link-hover-color:#4152A5 !important
+    --bs-nav-link-hover-color:#F197A4 !important
 }
 .navbar {
     border-bottom: solid 1px #EBEBEB;
@@ -18,7 +18,7 @@
   }
   
   .bottom-nav-link.active {
-    color: #4152A5;
+    color: #F197A4;
   }
   
   .bottom-tab-label {
