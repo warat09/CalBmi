@@ -6,23 +6,23 @@ import { NavLink } from 'react-router-dom';
 import '../css/navbar.css';
 
 const tabs = [{
-    route: "/Bmi",
+    route: "Bmi",
     icon: faWeight,
     label: "Bmi"
   },{
-    route: "/Drink",
+    route: "Drink",
     icon: faBottleWater,
     label: "Drink"
   },{
-    route: "/Exercise",
+    route: "Exercise",
     icon: faDumbbell,
     label: "Exercise"
   },{
-    route: "/Food",
+    route: "Food",
     icon: faBowlFood,
     label: "Food"
   },{
-    route: "/Mood",
+    route: "Mood",
     icon: faFaceSmile,
     label: "Mood"
   }]
@@ -32,25 +32,25 @@ const Navigation = (props) => {
         <div>
         <nav className="navbar navbar-expand-md navbar-light d-none d-lg-block sticky-top square bg-light rounded" role="navigation">
           <div className="container-fluid">
-              <a className="navbar-brand" href="/Home">Brand</a>
+              <a className="navbar-brand" href="/CalBmi/">Brand</a>
               <Nav className="ml-auto">
                 <NavItem>
-                  <NavLink to="/Bmi" className="nav-link">
+                  <NavLink to="Bmi" className="nav-link">
                   Bmi
                   </NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink to="/Drink" className="nav-link">
+                  <NavLink to="Drink" className="nav-link">
                   Drink
                   </NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink to="/Exercise" className="nav-link">
+                  <NavLink to="Exercise" className="nav-link">
                   Exercise
                   </NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink to="/Mood" className="nav-link">
+                  <NavLink to="Mood" className="nav-link">
                   Mood
                   </NavLink>
                 </NavItem>
