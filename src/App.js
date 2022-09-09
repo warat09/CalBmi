@@ -15,12 +15,12 @@ function App() {
     <div className = "app">
       {window.location.href.split("/")[window.location.href.split("/").length-1]!=="" &&<Navigation/>}
         <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route path="Bmi" element={<Bmi />} />
-          <Route path="Drink" element={<Drink />} />
-          <Route path="Exercise" element={<Exercise />} />
-          <Route path="Food" element={<Food />} />
-          <Route path="Mood" element={<Mood />} />
+          <Route exact path="CalBmi" element={<Home />} />
+          <Route path="CalBmi/Bmi" element={<Bmi />} />
+          <Route path="CalBmi/Drink" element={<Drink />} />
+          <Route path="CalBmi/Exercise" element={<Exercise />} />
+          <Route path="CalBmi/Food" element={<Food />} />
+          <Route path="CalBmi/Mood" element={<Mood />} />
         </Routes>
     </div>
   );
