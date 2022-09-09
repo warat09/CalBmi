@@ -1,7 +1,4 @@
-.waterbottlediv{
-    height: auto;
-    width: auto;
-}
-.waterbottle{
-    /* background-color: aqua; */
+.waterbottlediv img{
+    height: 300px;
+    width: 300px;
 }
