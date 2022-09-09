@@ -1,4 +1,4 @@
-import {Route, Routes,NavLink} from "react-router-dom";
+import {HashRouter as Router,Route, Routes,NavLink} from "react-router-dom";
 
 import Home from "./view/Home";
 import Bmi from "./view/BMI";
@@ -13,6 +13,7 @@ function App() {
   
   return (
     <div className = "app">
+            <Router>
       {window.location.href.split("/")[window.location.href.split("/").length-1]!=="" &&<Navigation/>}
         <Routes>
           <Route exact path="/" element={<Home />} />
@@ -22,6 +23,7 @@ function App() {
           <Route path="Food" element={<Food />} />
           <Route path="Mood" element={<Mood />} />
         </Routes>
+      </Router>
     </div>
   );
 }
