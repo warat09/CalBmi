@@ -1,4 +1,23 @@
 .waterbottlediv img{
-    height: 300px;
-    width: 300px;
+    margin:auto;
+    align-items: center;
+    box-align: center;
+    height: auto;
+    width: 100%;
+}
+.Time{
+    text-align: center;
+}
+.TimeDiv{
+    margin:auto;
+    padding: 8px;
+}
+/* .itemdiv{
+    align:center;
+    align-items: center;
+    
+} */
+.waterbottle{
+    align-items: center;
+    margin:auto;
 }

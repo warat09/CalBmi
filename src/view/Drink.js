@@ -13,24 +13,10 @@ function Drink() {
     const saved = localStorage.getItem("user");
     var firsttime = new Date(Date.now());
     const [date, setDate] = useState(firsttime.getHours() + ":" +firsttime.getMinutes() + ":" +firsttime.getSeconds());
-    const [date2,setdate2] = useState(0)
+    const [date2,setdate2] = useState(parseInt(date.split(":")[0].concat(date.split(":")[1].concat(date.split(":")[2]))))
     const [sleep,setsleep] =useState(false)
-    // ms.getToken({vapidKey: "BAB2qXFJHhvTs3tjcAFzMsQS2AKNQmVAGgGCZ762VzSRRrJkN4DOS-IG_8vb-LUi2mqtgcLerg4iMOb3kDJB57U"});
-    // function requestPermission() {
-    //   console.log('Requesting permission...');
-    //   Notification.requestPermission().then((permission) => {
-    //     if (permission === 'granted') {
-    //       console.log('Notification permission granted.');
-    //     }
-    //   })
-    // }
-    // useEffect(()=>{
-    //   ms.requestPermission().then(()=>{
-    //     return ms.getToken();
-    //   }).then((data)=>{
-    //     console.log("token",data)
-    //   })
-    // })
+    const [State,setState] = useState(0)
+
     function getRealTime() {
         const currentTime = Date.now();
         var d = new Date(currentTime)
@@ -60,6 +46,9 @@ function Drink() {
        
     useEffect(() => {
         // document.title = date;
+        // setdate2()
+        // console.log("date : ",date)
+        // console.log("date2: ",date2)
         const timerID = setInterval(() => getRealTime(), 1000);
         return () => {
           clearInterval(timerID);
@@ -69,6 +58,7 @@ function Drink() {
     useEffect(()=>{
       setdate2(parseInt(date.split(":")[0].concat(date.split(":")[1].concat(date.split(":")[2]))))
       if((date2>=200001&&date2<240000)||(date2>=0&&date2<80000)){
+        // console.log(date2)
         setsleep(true)
       }
       else if(date2>=80000){
@@ -91,43 +81,74 @@ function Drink() {
              });
         }
     },[date])
+    const handlenexttime = ()=>{
+        if ((date2>=200000&&date2<240000&&sleep==true)||(date2>=0&&date2<80000&&sleep==true)){
+          return "8:00:00"
+        }
+        else if (date2>=170000&&date2<200000){
+          return "20:00:00"
+        }
+        else if(date2>=140000&&date2<170000){
+          return "17:00:00"
+        }
+        else if(date2>=110000&&date2<140000){
+          return "14:00:00"
+        }
+        else{
+          return "11:00:00"
+        }
+          
+      
+    }
   return (
 <div>
     <div className="header">
       <h1>การดื่มน้ำ (DRINK)</h1>
     </div>
-    <Container>
-      <h1>{date}</h1>     
-        {date2>=80000&&date2<110000&&
+    <Container className="itemdiv">
+      <div className="TimeDiv">
+        <h1 className="Time">เวลา ปัจจุบัน : {date}</h1>    
+        <h1 className="Time">รอบต่อไป : {handlenexttime()}</h1> 
+      </div>
+        {date2>=200000&&date2<240000&&sleep==false&&
           <div className='waterbottlediv'>
-            <img src={water4} className='waterbottle' alt="logo"/>
-          </div>
-        }
-        {date2>=110000&&date2<140000&&
-          <div className='waterbottlediv'>
-            <img src={water3} className='waterbottle' alt="logo"/>
-          </div>
-        }
-        {sleep==true&&
-          <div className='waterbottlediv'>
-            <img src={water5} className='waterbottle' alt="logo"/>
-          </div>
-        }
-        {date2>=140000&&date2<170000&&
-          <div className='waterbottlediv'>
-            <img src={water2} className='waterbottle' alt="logo"/>
+            {/* {setState(0)} */}
+            <img src={emptybottle} className='waterbottle' alt="logo"/>
           </div>
         }
         {date2>=170000&&date2<200000&&
           <div className='waterbottlediv'>
+            {/* {setState(1)} */}
             <img src={water1} className='waterbottle' alt="logo"/>
           </div>
-        }
-        {date2>=200000&&date2<240000&&sleep==false&&
+        }{date2>=140000&&date2<170000&&
           <div className='waterbottlediv'>
-            <img src={emptybottle} className='waterbottle' alt="logo"/>
+            {/* {setState(2)} */}
+            <img src={water2} className='waterbottle' alt="logo"/>
           </div>
         }
+        {date2>=110000&&date2<140000&&
+          <div className='waterbottlediv'>
+            {setState(3)}
+            <img src={water3} className='waterbottle' alt="logo"/>
+          </div>
+        }
+        {date2>=80000&&date2<110000&&
+          <div className='waterbottlediv'>
+            {setState(4)}
+            <img src={water4} className='waterbottle' alt="logo"/>
+          </div>
+        }
+        
+        {sleep==true&&
+          <div className='waterbottlediv'>
+            {/* {setState(5)} */}
+            <img src={water5} className='waterbottle' alt="logo"/>
+          </div>
+        }
+        
+        
+        
     </Container>
 </div>
   );

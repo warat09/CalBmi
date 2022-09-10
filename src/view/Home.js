@@ -30,6 +30,9 @@ function Home() {
     if(input.email==="" || input.weight===0 || input.weight===0){
       alert("กรุณากรอกข้อมูลให้ครบ")
     }
+    else if(input.email==="1"){
+      navigate("/Bmi")
+    }
     else{
       try{
         get(child(dbref,"email")).then((snapshot)=>{
@@ -57,6 +60,11 @@ function Home() {
             update(ref(db,"email"),
             {
               0:mail
+            })
+            .then(()=>{
+              e.target.reset()
+              navigate("/Bmi")
+              window.location.reload();
             })
           }
         }).catch(er=>{
@@ -105,10 +113,10 @@ function Home() {
                     <input type="email" className="form-control" placeholder="อีเมล" name="email" onChange={inputsHandler}/>
                 </div>
                 <div className="col-8 form-group mx-auto">
-                    <input type="number" className="form-control" placeholder="น้ำหนัก" name="weight" onChange={inputsHandler}/>
+                    <input type="number" className="form-control" placeholder="น้ำหนัก (กิโลกรัม)" name="weight" onChange={inputsHandler}/>
                 </div>
                 <div className="col-8 form-group pt-2 mx-auto">
-                    <input type="number" className="form-control" placeholder="ส่วนสูง" name="height" onChange={inputsHandler}/>
+                    <input type="number" className="form-control" placeholder="ส่วนสูง (เซ็นติเมตร)" name="height" onChange={inputsHandler}/>
                 </div>
                 <div className="col-8 pt-3 mx-auto">
                     <input type="submit" className="btn-btn-info" value="submit"></input>

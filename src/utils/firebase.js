@@ -25,24 +25,24 @@ const ms = getMessaging(app);
 
 export default db
 
-const requestPermission = ()=>{
-  console.log("requesting permission")
-  Notification.requestPermission().then(permission=>{
-    if (permission === "granted"){
-      console.log("permission granted")
-      getToken(ms,{vapidKey: "key"})
-      .then(currentToken=>{
-        if(currentToken){
-          console.log("token = ",currentToken)
-        }
-        else{
-          console.log("cannot get token")
-        }
-      })
-    }
-    else{
-      console.log("didn't get permission")
-    }
-  })
-}
-requestPermission()
+// const requestPermission = ()=>{
+//   console.log("requesting permission")
+//   Notification.requestPermission().then(permission=>{
+//     if (permission === "granted"){
+//       console.log("permission granted")
+//       getToken(ms,{vapidKey: "key"})
+//       .then(currentToken=>{
+//         if(currentToken){
+//           console.log("token = ",currentToken)
+//         }
+//         else{
+//           console.log("cannot get token")
+//         }
+//       })
+//     }
+//     else{
+//       console.log("didn't get permission")
+//     }
+//   })
+// }
+// requestPermission()

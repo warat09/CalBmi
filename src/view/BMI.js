@@ -28,16 +28,19 @@ function Bmi() {
   return (
     <div>
       <div className="header">
-        <h1>คำนวณหาค่าดัชนีมวลกาย (BMI)</h1>
+        {/* <h1>คำนวณหาค่าดัชนีมวลกาย (BMI)</h1> */}
+        <h1>ข้อมูลของผู้ใช้</h1>
       </div>
       <Container>
-        <h1 className="data">ข้อมูลของผู้ใช้</h1>
-        <p>Email:{initial.email}</p>
-        <p>Gender:{gender}</p>
-        <p>Weight:{initial.weight}</p>
-        <p>Height:{initial.height}</p>
-        <p>Bmi:{bmi}</p>
-        <p>คุณอยู่ในเกณฑ์: {status}</p>
+        {/* <h1 className="data">ข้อมูลของผู้ใช้</h1> */}
+        <div className="detail">
+          <p>Email : {initial.email}</p>
+          <p>Gender : {gender}</p>
+          <p>Weight : {initial.weight} kg</p>
+          <p>Height : {initial.height} cm</p>
+          <p>Bmi : {bmi}</p>
+          <p>คุณอยู่ในเกณฑ์ : {status}</p>
+        </div>
       </Container>
     </div>
   );
