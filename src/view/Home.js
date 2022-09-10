@@ -4,9 +4,12 @@ import db from '../utils/firebase';
 import {Container} from 'reactstrap';
 import '../css/Home.css'
 import { useNavigate,Navigate } from 'react-router-dom';
+import { async } from '@firebase/util';
 function Home() {
   
   const[input, setinput] = useState({email:'',weight:0,height:0,gender:'Male'});
+  const [gender, setGender] = useState("Male");
+
   
   const[ar,setar] = useState([])
   const arref = useRef(ar)
@@ -17,6 +20,8 @@ function Home() {
   },[ar])
 
   const handleSubmit  = (e) => {
+    input.gender = gender
+    console.log(input)
     const temp = []
     const dbref = ref(db)
     
@@ -40,7 +45,9 @@ function Home() {
             {
               [num]:mail
             }).then(()=>{
+              e.target.reset()
               navigate("/Bmi")
+              window.location.reload();
             })
 
             
@@ -62,12 +69,15 @@ function Home() {
       }
     }
     e.preventDefault();
-    e.target.reset()
   }
   const inputsHandler = (e) =>{
     setinput({...input,[e.target.name]: e.target.value });
     console.log(e.target.value)
     e.preventDefault();
+  }
+
+  function onChangeValue(event) {
+    setGender(event.target.value);
   }
   return (
     <div>
@@ -79,15 +89,15 @@ function Home() {
       <Container>
         <form onSubmit={handleSubmit}>
             <div className="row pt-5 mx-auto">
-              <h className="Header">App Name</h>
+              <h1 className="Header">App Name</h1>
               <p className="Header2">กรุณากรองข้อมูลของคุณ</p>
-              <div className="col-8 form-group pt-2 mx-auto">
+              <div className="col-8 form-group pt-2 mx-auto" onChange={onChangeValue}>
                 <label>
-                  <input type="radio" value="Male" name="gender" onChange={inputsHandler} defaultChecked/>
+                  <input type="radio" value="Male" name="gender" checked={gender === "Male"}/>
                   <img src={'https://via.placeholder.com/40x60/0bf/fff&text=M'} />
                 </label>
                 <label>
-                  <input type="radio" value="Female" name="gender" onChange={inputsHandler}/>
+                  <input type="radio" value="Female" name="gender" checked={gender === "Female"}/>
                   <img src={'https://via.placeholder.com/40x60/b0f/fff&text=F'} />
                 </label>
               </div>
