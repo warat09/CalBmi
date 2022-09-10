@@ -66,11 +66,14 @@ function Home() {
   }
   const inputsHandler = (e) =>{
     setinput({...input,[e.target.name]: e.target.value });
+    console.log(e.target.value)
     e.preventDefault();
   }
   return (
     <div>
+      
       <div className="header">
+        
         <h1>กรอกข้อมูลส่วนตัว (Personal Information)</h1>
       </div>
       <Container>
