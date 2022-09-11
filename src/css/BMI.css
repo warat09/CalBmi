@@ -1,0 +1,28 @@
+.header h1{
+    background:#F197A4;
+    color: #ffffff;
+    text-align: center;
+    font-size: 10 rem;
+    padding: 2rem 2rem 2rem 2rem;
+    /* color:red; */
+    text-shadow: 1px 1px 1px black;
+}
+.data {
+    text-align: center;
+    /* color: #ffffff; */
+
+}
+p{
+    size: 0.5 rem;
+}
+.detail{
+    background-color:rgba(186, 250, 228, 0.487);
+    border-radius: 5px;
+    padding: 2.2rem;
+    box-shadow: 1px 1px 2px 1px black;
+    font-size: 17.5px;
+    color:black;
+    /* margin: 5px 0px 0px 10px; */
+    /* margin:auto; */
+    margin:15px 0px;
+}
