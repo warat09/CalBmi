@@ -1,21 +1,24 @@
 {
   "files": {
-    "main.css": "/CalBmi/static/css/main.25f16723.css",
-    "main.js": "/CalBmi/static/js/main.8daf557e.js",
+    "main.css": "/CalBmi/static/css/main.25f8fddc.css",
+    "main.js": "/CalBmi/static/js/main.fe6d12c0.js",
     "static/js/787.bda1ff78.chunk.js": "/CalBmi/static/js/787.bda1ff78.chunk.js",
     "static/media/water.png": "/CalBmi/static/media/water.eab083307bbd5b2ea78d.png",
     "static/media/water1.png": "/CalBmi/static/media/water1.8bf5bc02015ae72f3e38.png",
+    "static/media/angry.jpg": "/CalBmi/static/media/angry.c476bc633c77d933dae3.jpg",
+    "static/media/sad.jpg": "/CalBmi/static/media/sad.e193ab930ee450b5158e.jpg",
+    "static/media/smile.jpg": "/CalBmi/static/media/smile.ffc0ca300c3ced8b9059.jpg",
     "static/media/water5.png": "/CalBmi/static/media/water5.607df5c871c3bf225080.png",
     "static/media/water4.png": "/CalBmi/static/media/water4.1b7a1d8276cbab0e018b.png",
     "static/media/water3.png": "/CalBmi/static/media/water3.82cec84de01955267200.png",
     "static/media/water2.png": "/CalBmi/static/media/water2.4bb59db136b36aeb8997.png",
     "index.html": "/CalBmi/index.html",
-    "main.25f16723.css.map": "/CalBmi/static/css/main.25f16723.css.map",
-    "main.8daf557e.js.map": "/CalBmi/static/js/main.8daf557e.js.map",
+    "main.25f8fddc.css.map": "/CalBmi/static/css/main.25f8fddc.css.map",
+    "main.fe6d12c0.js.map": "/CalBmi/static/js/main.fe6d12c0.js.map",
     "787.bda1ff78.chunk.js.map": "/CalBmi/static/js/787.bda1ff78.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.25f16723.css",
-    "static/js/main.8daf557e.js"
+    "static/css/main.25f8fddc.css",
+    "static/js/main.fe6d12c0.js"
   ]
 }
