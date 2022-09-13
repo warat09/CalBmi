@@ -5,6 +5,11 @@ import {Container} from 'reactstrap';
 import '../css/Home.css'
 import { useNavigate,Navigate } from 'react-router-dom';
 import { async } from '@firebase/util';
+import boy from '../images/boy.jpg'
+import girl from '../images/girl.jpg'
+
+
+
 function Home() {
   
   const[input, setinput] = useState({email:'',weight:0,height:0,gender:'Male'});
@@ -99,25 +104,27 @@ function Home() {
             <div className="row pt-5 mx-auto">
               <h1 className="Header">App Name</h1>
               <p className="Header2">กรุณากรองข้อมูลของคุณ</p>
-              <div className="col-8 form-group pt-2 mx-auto" onChange={onChangeValue}>
+              <div className=" form-group pt-2 mx-auto text-center text-md-right" onChange={onChangeValue}>
                 <label>
                   <input type="radio" value="Male" name="gender" checked={gender === "Male"}/>
-                  <img src={'https://via.placeholder.com/40x60/0bf/fff&text=M'} />
+                  <img src={boy} />
                 </label>
                 <label>
                   <input type="radio" value="Female" name="gender" checked={gender === "Female"}/>
-                  <img src={'https://via.placeholder.com/40x60/b0f/fff&text=F'} />
+                  <img src={girl} />
                 </label>
               </div>
-              <div className="col-8 form-group pt-2 mx-auto">
+                <div className="col-8 form-group pt-2 mx-auto">
                     <input type="email" className="form-control" placeholder="อีเมล" name="email" onChange={inputsHandler}/>
-                </div>
-                <div className="col-8 form-group mx-auto">
-                    <input type="number" className="form-control" placeholder="น้ำหนัก (กิโลกรัม)" name="weight" onChange={inputsHandler}/>
                 </div>
                 <div className="col-8 form-group pt-2 mx-auto">
                     <input type="number" className="form-control" placeholder="ส่วนสูง (เซ็นติเมตร)" name="height" onChange={inputsHandler}/>
                 </div>
+
+                <div className="col-8 form-group pt-2 mx-auto">
+                    <input type="number" className="form-control" placeholder="น้ำหนัก (กิโลกรัม)" name="weight" onChange={inputsHandler}/>
+                </div>
+                
                 <div className="col-8 pt-3 mx-auto">
                     <input type="submit" className="btn-btn-info" value="submit"></input>
                 </div>

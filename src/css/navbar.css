@@ -16,8 +16,8 @@
   .bottom-nav-link {
     color: #55575b;
   }
-  
-  .bottom-nav-link.active {
+
+  .bottom-nav-link.active,.nav-link.active {
     color: #F197A4;
   }
   

@@ -50,6 +50,11 @@ const Navigation = (props) => {
                   </NavLink>
                 </NavItem>
                 <NavItem>
+                  <NavLink to="Food" className="nav-link">
+                  Food
+                  </NavLink>
+                </NavItem>
+                <NavItem>
                   <NavLink to="Mood" className="nav-link">
                   Mood
                   </NavLink>
