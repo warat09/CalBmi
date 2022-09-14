@@ -110,6 +110,8 @@ function Drink() {
         <h1 className="Time">เวลา ปัจจุบัน : {date}</h1>    
         <h1 className="Time">รอบต่อไป : {handlenexttime()}</h1> 
       </div>
+        <br/>
+        {/* <p>test</p> */}
         {date2>=200000&&date2<240000&&sleep==false&&
           <div className='waterbottlediv'>
             {/* {setState(0)} */}

@@ -3,6 +3,7 @@
     align-items: center;
     box-align: center;
     height: auto;
+    padding: 20px;
     width: 100%;
 }
 .Time{
@@ -20,4 +21,8 @@
 .waterbottle{
     align-items: center;
     margin:auto;
+    padding: 20px;
+    /* padding: 8px;
+    width: 90%;
+    height: auto; */
 }

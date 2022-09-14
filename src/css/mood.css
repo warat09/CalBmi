@@ -3,10 +3,14 @@
     padding:4px;
     display:flex;
     flex-flow:  row wrap;
+    align-items:center;
+    align-content: center;
+    justify-content:center;
+
 }
 .emotion{
-    width:8rem;
-    height:8rem;;
+    width:9rem;
+    height:9rem;;
     margin:5px;
     padding:2px;
     position:relative;
@@ -20,55 +24,54 @@
     cursor:pointer;
 }
 .angry{
-    width:6.5rem;
-    height:6.5rem;
-    margin:2px;
+    width:7rem;
+    height:7rem;
+    margin:2.5px;
     background-image:url("./../images/Emotion/angry.jpg");
     background-size:cover;
 }
 .badly{
-    width:6.5rem;
-    height:6.5rem;
-    margin:2px;
+    width:7rem;
+    height:7rem;
+    margin:2.5px;
     background-image:url("./../images/Emotion/badly.jpg");
     background-size:cover;
 }
 .sad{
-    width:6.5rem;
-    height:6.5rem;
-    margin:2px;
+    width:7rem;
+    height:7rem;
+    margin:2.5px;
     background-image:url("./../images/Emotion/sad.jpg");
     background-size:cover;
 }
 .smile{
-    width:6.5rem;
-    height:6.5rem;
-    margin:2px;
+    width:7rem;
+    height:7rem;
+    margin:2.5px;
     background-image:url("./../images/Emotion/smile.jpg");
     background-size:cover;
 }
 .happy{
-    width:6.5rem;
-    height:6.5rem;
-    margin:2px;
+    width:7rem;
+    height:7rem;
+    margin:2.5px;
     background-image:url("./../images/Emotion/happy.jpg");
     background-size:cover;
 }
 .BigPic{
     display:block;
-    width:15rem;
-    height:15rem;
+    width:18rem;
+    height:18rem;
     margin-left:auto;
     margin-right:auto;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 17px;
+    margin-bottom: 17px;
     align-items: center;
     /* background-color:black; */
     /* transition: ease .25s; 
     -webkit-transition: ease .25s; */
     animation: theAnimation 2s linear;
 }
-.Bigpic.show-loading
 .BigPicDiv{
     margin:auto;
     /* width */
@@ -84,4 +87,5 @@
 }
 .detailp {
     text-align:center;
+    font-size:1.1rem;
 }
