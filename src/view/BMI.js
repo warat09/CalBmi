@@ -1,8 +1,9 @@
-import * as React from "react";
+import React from 'react'
 import {Container} from 'reactstrap';
 import '../css/BMI.css'
 
 function Bmi() {
+
   const saved = localStorage.getItem("user");
   const daystate = localStorage.getItem("ds");
   // localStorage.setItem('user', JSON.stringify(input));

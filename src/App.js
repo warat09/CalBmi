@@ -1,3 +1,4 @@
+import React, {useEffect } from 'react'
 import {HashRouter as Router,Route, Routes,NavLink} from "react-router-dom";
 
 import Home from "./view/Home";
@@ -10,6 +11,10 @@ import Navigation from "./view/navbar";
 import './App.css';
 
 function App() {
+  useEffect(() => {
+    // change background color with a random color
+    document.body.style.background = "#eef4f9";
+  });
   
   return (
     <div className = "app">

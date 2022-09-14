@@ -316,7 +316,7 @@ function Exercise() {
     }
   
     return (
-        <div style={{background: "#eef4f9"}}>
+        <div>
             <div className="header">
                 <h1>ออกกำลังกาย (EXERCISE)</h1>
             </div>
