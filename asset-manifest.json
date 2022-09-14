@@ -1,9 +1,14 @@
 {
   "files": {
-    "main.css": "/CalBmi/static/css/main.37b526f9.css",
-    "main.js": "/CalBmi/static/js/main.c004398f.js",
+    "main.css": "/CalBmi/static/css/main.01b1585a.css",
+    "main.js": "/CalBmi/static/js/main.52837ff5.js",
     "static/js/787.bda1ff78.chunk.js": "/CalBmi/static/js/787.bda1ff78.chunk.js",
+    "static/media/Bicyclecrunch.jpg": "/CalBmi/static/media/Bicyclecrunch.8ddaf11134f0b22c315b.jpg",
+    "static/media/Mountainclimber.jpg": "/CalBmi/static/media/Mountainclimber.9a1e26c4689bea9b882e.jpg",
+    "static/media/SitUp.jpg": "/CalBmi/static/media/SitUp.fb3bed36cb1331814918.jpg",
     "static/media/boy.jpg": "/CalBmi/static/media/boy.4988e72184b554fa7d4d.jpg",
+    "static/media/v-ups.jpg": "/CalBmi/static/media/v-ups.d37384026881f75b2018.jpg",
+    "static/media/Plank.jpg": "/CalBmi/static/media/Plank.8e6cee16f6ff61e51076.jpg",
     "static/media/girl.jpg": "/CalBmi/static/media/girl.309738ace105d22ff6fd.jpg",
     "static/media/water.png": "/CalBmi/static/media/water.eab083307bbd5b2ea78d.png",
     "static/media/water1.png": "/CalBmi/static/media/water1.8bf5bc02015ae72f3e38.png",
@@ -15,12 +20,12 @@
     "static/media/water3.png": "/CalBmi/static/media/water3.82cec84de01955267200.png",
     "static/media/water2.png": "/CalBmi/static/media/water2.4bb59db136b36aeb8997.png",
     "index.html": "/CalBmi/index.html",
-    "main.37b526f9.css.map": "/CalBmi/static/css/main.37b526f9.css.map",
-    "main.c004398f.js.map": "/CalBmi/static/js/main.c004398f.js.map",
+    "main.01b1585a.css.map": "/CalBmi/static/css/main.01b1585a.css.map",
+    "main.52837ff5.js.map": "/CalBmi/static/js/main.52837ff5.js.map",
     "787.bda1ff78.chunk.js.map": "/CalBmi/static/js/787.bda1ff78.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.37b526f9.css",
-    "static/js/main.c004398f.js"
+    "static/css/main.01b1585a.css",
+    "static/js/main.52837ff5.js"
   ]
 }
