@@ -104,15 +104,17 @@ function Home() {
             <div className="row pt-5 mx-auto">
               <h1 className="Header">App Name</h1>
               <p className="Header2">กรุณากรองข้อมูลของคุณ</p>
-              <div className=" form-group pt-2 mx-auto text-center text-md-right" onChange={onChangeValue}>
-                <label>
-                  <input type="radio" value="Male" name="gender" checked={gender === "Male"}/>
-                  <img src={boy} />
-                </label>
-                <label>
-                  <input type="radio" value="Female" name="gender" checked={gender === "Female"}/>
-                  <img src={girl} />
-                </label>
+              <div className="form-group pt-2 mx-auto text-center text-md-right" onChange={onChangeValue}>
+                <div className="gender">
+                  <label>
+                    <input type="radio" value="Male" name="gender" checked={gender === "Male"}/>
+                    <img src={boy} />
+                  </label>
+                  <label>
+                    <input type="radio" value="Female" name="gender" checked={gender === "Female"}/>
+                    <img src={girl} />
+                  </label>
+                </div>
               </div>
                 <div className="col-8 form-group pt-2 mx-auto">
                     <input type="email" className="form-control" placeholder="อีเมล" name="email" onChange={inputsHandler}/>
