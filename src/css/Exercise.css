@@ -60,7 +60,7 @@
     padding: 1.2em;
   }
   .start{
-    width: 130px;
+    width: 140px;
     height: 65px;
     background-color: #218E01;
     border:0px solid black;
@@ -70,7 +70,7 @@
     margin: 0 5px 2px 0;
   }
   .pause{
-    width: 130px;
+    width: 140px;
     height: 65px;
     background-color: #B0A300;
     border:0px solid black;
@@ -80,7 +80,7 @@
     margin: 0 5px 2px 0;
   }
   .stopdis{
-    width: 130px;
+    width: 140px;
     height: 65px;
     background-color: grey;
     border:0px solid black;
@@ -89,7 +89,7 @@
     border-radius: 10px;
   }
   .stop{
-    width: 130px;
+    width: 140px;
     height: 65px;
     background-color: #be0101;
     border:0px solid black;
