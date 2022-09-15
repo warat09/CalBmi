@@ -19,7 +19,8 @@ function App() {
   return (
     <div className = "app">
             <Router>
-      {window.location.href.split("/")[window.location.href.split("/").length-1]!=="" &&<Navigation/>}
+      {window.location.href.split("/")[window.location.href.split("/").length-1]!=="" &&  
+      window.location.href.split("/")[window.location.href.split("/").length-1]!=="Home"&&<Navigation/>}
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="Bmi" element={<Bmi />} />
