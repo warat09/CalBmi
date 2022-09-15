@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/CalBmi/static/css/main.c898e7b4.css",
+    "main.css": "/CalBmi/static/css/main.c4d8f5b3.css",
     "main.js": "/CalBmi/static/js/main.b2de5f89.js",
     "static/js/787.bda1ff78.chunk.js": "/CalBmi/static/js/787.bda1ff78.chunk.js",
     "static/media/Bicyclecrunch.jpg": "/CalBmi/static/media/Bicyclecrunch.8ddaf11134f0b22c315b.jpg",
@@ -20,12 +20,12 @@
     "static/media/water3.png": "/CalBmi/static/media/water3.82cec84de01955267200.png",
     "static/media/water2.png": "/CalBmi/static/media/water2.4bb59db136b36aeb8997.png",
     "index.html": "/CalBmi/index.html",
-    "main.c898e7b4.css.map": "/CalBmi/static/css/main.c898e7b4.css.map",
+    "main.c4d8f5b3.css.map": "/CalBmi/static/css/main.c4d8f5b3.css.map",
     "main.b2de5f89.js.map": "/CalBmi/static/js/main.b2de5f89.js.map",
     "787.bda1ff78.chunk.js.map": "/CalBmi/static/js/787.bda1ff78.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c898e7b4.css",
+    "static/css/main.c4d8f5b3.css",
     "static/js/main.b2de5f89.js"
   ]
 }
