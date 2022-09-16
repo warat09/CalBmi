@@ -318,7 +318,7 @@ function Exercise() {
     return (
         <div>
             <div className="header">
-                <h1>ออกกำลังกาย (EXERCISE)</h1>
+                <h1>ออกกำลังกาย</h1>
             </div>
             <Container>
             <div className="cards">

@@ -103,7 +103,7 @@ function Drink() {
   return (
 <div>
     <div className="header">
-      <h1>การดื่มน้ำ (DRINK)</h1>
+      <h1>การดื่มน้ำ</h1>
     </div>
     <Container className="itemdiv">
       <div className="TimeDiv">

@@ -49,7 +49,7 @@ function Mood() {
   return (  
     <div>
       <div className="header">
-        <h1>อารมณ์ (MOOD)</h1>
+        <h1>อารมณ์</h1>
       </div>
       <p className = "detailp">วันนี้คุณรู้สึกอย่างไรบ้าง</p>
       <Container>

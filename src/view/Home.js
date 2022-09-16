@@ -97,7 +97,7 @@ function Home() {
       
       <div className="header">
         
-        <h1>กรอกข้อมูลส่วนตัว (Personal Information)</h1>
+        <h1>กรอกข้อมูลส่วนตัว</h1>
       </div>
       <Container>
         <form onSubmit={handleSubmit}>
