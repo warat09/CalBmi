@@ -15,10 +15,31 @@ function Mood() {
   const moodlink = [angry,sad,badly,smile,happy]
   const moodstate = localStorage.getItem("emo");
   const [moodlist,setMood] = useState("")
+  const [state2,setstate2] = useState(0)
+  // const [state2,setstate2] = useState(0)
   const [text,setText] = useState("")
+  const daystate = localStorage.getItem("ds");
+  var today = new Date();
+  var dd = String(today.getDate()).padStart(2, '0');
+  var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+  var yyyy = today.getFullYear();
+  today = mm + '/' + dd + '/' + yyyy;
+  // today +="1"
+
+  if(daystate===null){
+    localStorage.setItem('ds', today);
+    localStorage.setItem('emo',-1)
+    
+
+  }
+  else if (daystate!==today){
+    localStorage.setItem('ds', today); 
+    localStorage.setItem('emo',-1)
+  }
   const handleclick=(pic)=>{
     setState(pic)
     localStorage.setItem('emo',pic)
+    setstate2(1)
   }
   // console.log(moodstate)
   useEffect(()=>{
@@ -53,14 +74,25 @@ function Mood() {
       </div>
       <p className = "detailp">วันนี้คุณรู้สึกอย่างไรบ้าง</p>
       <Container>
-      {State>-1&&
+      {State>-1&&state2==2&&
       <div className="BigPicDiv">
           <img src={moodlink[State]} className="BigPic"/>
           <p className = "detailp">{moodlist}</p>
           <p className = "detailp">{text}</p>
+          <br/>
+          <br/>
+          <h1 className = "detailp">หวังว่าวันนี้จะดีสำหรับคุณนะ</h1>
       </div>
       }
-        
+      {state2===1&&
+        <div>
+            <textarea id="w3review" name="w3review" rows="4" cols="50" placeholder="ใส่เรื่องราวของคุณได้ที่นี่"
+          ></textarea>
+          <button onClick={()=>{
+            setstate2(2)
+          }}>Ok</button>
+        </div>
+      }
       
       {moodstate==-1 &&
                 <div className="emotionDiv">

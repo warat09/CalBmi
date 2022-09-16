@@ -5,7 +5,7 @@ import '../css/BMI.css'
 function Bmi() {
 
   const saved = localStorage.getItem("user");
-  const daystate = localStorage.getItem("ds");
+ 
   // localStorage.setItem('user', JSON.stringify(input));
   const initial = JSON.parse(saved);
   var gender = initial.gender
@@ -18,19 +18,6 @@ function Bmi() {
   var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
   var yyyy = today.getFullYear();
   
-  today = mm + '/' + dd + '/' + yyyy;
-  // today +="1"
-
-  if(daystate===null){
-    localStorage.setItem('ds', today);
-    localStorage.setItem('emo',-1)
-    
-
-  }
-  else if (daystate!==today){
-    localStorage.setItem('ds', today); 
-    localStorage.setItem('emo',-1)
-  }
   
   if(bmi < 18.5){
     status = "น้ำหนักต่ำกว่าเกณ"
