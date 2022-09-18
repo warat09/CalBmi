@@ -8,11 +8,19 @@ import Exercise from "./view/Exercise";
 import Food from "./view/Food";
 import Mood from "./view/mood";
 import Navigation from "./view/navbar";
+import Fish from './view/MenuFood/fish';
+import Pork from './view/MenuFood/pork';
+import Vegetable from './view/MenuFood/vegetable';
+import Egg from './view/MenuFood/egg';
+import Fruit from './view/MenuFood/fruit';
+import Chicken from './view/MenuFood/chicken';
+import Water from './view/MenuFood/water';
 import './App.css';
 
 function App() {
   useEffect(() => {
     // change background color with a random color
+    document.title = "Healthy Diary"
     document.body.style.background = "#eef4f9";
   });
   
@@ -28,6 +36,13 @@ function App() {
           <Route path="Exercise" element={<Exercise />} />
           <Route path="Food" element={<Food />} />
           <Route path="Mood" element={<Mood />} />
+          <Route path="Fish" element={<Fish />} />
+          <Route path="Pork" element={<Pork />} />
+          <Route path="Vegetable" element={<Vegetable />} />
+          <Route path="Egg" element={<Egg />} />
+          <Route path="Fruit" element={<Fruit />} />
+          <Route path="Chicken" element={<Chicken />} />
+          <Route path="Water" element={<Water />} />
         </Routes>
       </Router>
     </div>

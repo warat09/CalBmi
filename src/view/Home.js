@@ -102,7 +102,7 @@ function Home() {
       <Container>
         <form onSubmit={handleSubmit}>
             <div className="row pt-5 mx-auto">
-              <h1 className="Header">App Name</h1>
+              <h1 className="Header">Healthy Diary</h1>
               <p className="Header2">กรุณากรองข้อมูลของคุณ</p>
               <div className="form-group pt-2 mx-auto text-center text-md-right" onChange={onChangeValue}>
                 <div className="gender">
