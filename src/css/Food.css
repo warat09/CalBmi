@@ -1,19 +1,86 @@
 .center {
     position: absolute;
     top: 50%;
-    left: 48%;
+    left: 44%;
+    margin: 50px 0 0 0;
+    padding-bottom: 300px;
+  }
+  .icnvegetable {
+    background-image: url("../images/icon/Vegetable.png");
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    display:block;
+  }
+  .icnwater {
+    background-image: url("../images/icon/water.png");
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    display:block;
+  }
+  .icnfruit {
+    background-image: url("../images/icon/fruit.png");
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    display:block;
+  }
+  .icnpork {
+    background-image: url("../images/icon/pork.png");
+    background-size: cover;
+    width: 53px;
+    height: 53px;
+    display:block;
+  }
+  .icnegg {
+    background-image: url("../images/icon/egg.png");
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    display:block;
+  }
+  .icnfish {
+    background-image: url("../images/icon/fish.png");
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    display:block;
+  }
+  .icnchicken {
+    background-image: url("../images/icon/chicken.png");
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    display:block;
+  }
+  .icnmid {
+    background-image: url("../images/5.png");
+    background-size: cover;
+    width: 150px;
+    height: 150px;
+    display:block;
   }
   @media only screen and (max-width: 991px) {
     .center{
-        top: 50%;
-        left: 45%;
+        top: 40%;
+        left: 40%;
+        margin: 80px 0 0 0;
+        padding-bottom: 350px;
     }
     
 }
-@media only screen and (max-width: 601px) {
+@media only screen and (max-width: 500px) {
     .center{
-        top: 50%;
-        left: 38%;
+        top: 30%;
+        left: 31%;
+        margin: 80px 0 0 0;
     }
-    
+}
+@media only screen and (max-width: 371px) {
+  .center{
+      top: 30%;
+      left: 30%;
+      margin: 80px 0 0 0;
+  }
 }

@@ -7,6 +7,7 @@ import { useNavigate,Navigate } from 'react-router-dom';
 import { async } from '@firebase/util';
 import boy from '../images/boy.jpg'
 import girl from '../images/girl.jpg'
+import logo from '../images/logo.png'
 
 
 
@@ -101,8 +102,11 @@ function Home() {
       </div>
       <Container>
         <form onSubmit={handleSubmit}>
-            <div className="row pt-5 mx-auto">
-              <h1 className="Header">Healthy Diary</h1>
+            <div className="row mx-auto">
+              <img src={logo} style={{
+                width:350,
+                height:270,
+              }} className="Header"></img>
               <p className="Header2">กรุณากรองข้อมูลของคุณ</p>
               <div className="form-group pt-2 mx-auto text-center text-md-right" onChange={onChangeValue}>
                 <div className="gender">
