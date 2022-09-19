@@ -45,10 +45,7 @@ function Drink() {
       }
        
     useEffect(() => {
-        // document.title = date;
-        // setdate2()
-        // console.log("date : ",date)
-        // console.log("date2: ",date2)
+
         const timerID = setInterval(() => getRealTime(), 1000);
         return () => {
           clearInterval(timerID);

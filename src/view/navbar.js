@@ -32,7 +32,7 @@ const Navigation = (props) => {
         <div>
         <nav className="navbar navbar-expand-md navbar-light d-none d-lg-block sticky-top square bg-light rounded" role="navigation">
           <div className="container-fluid">
-              <a className="navbar-brand" href="/CalBmi/">Brand</a>
+              <a className="navbar-brand" href="/CalBmi/">Healthy Diary</a>
               <Nav className="ml-auto">
                 <NavItem>
                   <NavLink to="Bmi" className="nav-link">

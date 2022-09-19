@@ -19,16 +19,12 @@ function Food() {
           <Planet
         centerContent={
           <div
-            style={{
-              height: 100,
-              width: 100,
-              borderRadius: '50%',
-              backgroundColor: '#1da8a4'
-            }}
-          />
+          className="icnmid"
+          >
+          </div>
         }
         open
-        orbitRadius={150}
+        orbitRadius={140}
         autoClose
       >
         <button
@@ -37,10 +33,10 @@ function Food() {
           height: 70,
           width: 70,
           borderRadius: '50%',
-          backgroundColor: '#9257ad',
+          backgroundColor: '#F36747',
         }}
         >
-          ผัก
+          <i className="icnvegetable"></i>
         </button>
         <button
         onClick={()=>article("Chicken")}
@@ -48,10 +44,10 @@ function Food() {
           height: 70,
           width: 70,
           borderRadius: '50%',
-          backgroundColor: '#9257ad',
+          backgroundColor: '#F36747',
         }}
         >
-          ไก่
+          <i className="icnchicken"></i>
         </button>
         <button
         onClick={()=>article("Fish")}
@@ -59,10 +55,10 @@ function Food() {
           height: 70,
           width: 70,
           borderRadius: '50%',
-          backgroundColor: '#9257ad',
+          backgroundColor: '#F36747',
         }}
         >
-          ปลา
+          <i className="icnfish"></i>
         </button>
         <button
         onClick={()=>article("Egg")}
@@ -70,10 +66,10 @@ function Food() {
           height: 70,
           width: 70,
           borderRadius: '50%',
-          backgroundColor: '#9257ad',
+          backgroundColor: '#F36747'
         }}
         >
-          ไข่
+          <i className="icnegg"></i>
         </button>
         <button
         onClick={()=>article("Pork")}
@@ -81,10 +77,10 @@ function Food() {
           height: 70,
           width: 70,
           borderRadius: '50%',
-          backgroundColor: '#9257ad',
+          backgroundColor: '#F36747',
         }}
         >
-          หมู
+          <i className="icnpork"></i>
         </button>
         <button
         onClick={()=>article("Fruit")}
@@ -92,10 +88,10 @@ function Food() {
           height: 70,
           width: 70,
           borderRadius: '50%',
-          backgroundColor: '#9257ad',
+          backgroundColor: '#F36747',
         }}
         >
-          ผลไม้
+          <i className="icnfruit"></i>
         </button>
         <button
         onClick={()=>article("Water")}
@@ -103,10 +99,10 @@ function Food() {
           height: 70,
           width: 70,
           borderRadius: '50%',
-          backgroundColor: '#9257ad',
+          backgroundColor: '#F36747',
         }}
         >
-        น้ำ
+        <i className="icnwater"></i>
         </button>
       </Planet>
         </div>

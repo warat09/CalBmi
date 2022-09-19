@@ -1,26 +1,43 @@
 import React from 'react'
 import {Container} from 'reactstrap';
 import '../css/BMI.css'
-
+import {ref,set,get,child,onValue,update} from "firebase/database"
+import { useEffect } from 'react';
+import db from '../utils/firebase';
+import boy from '../images/boy.png'
+import girl from '../images/girl.png'
+import { useNavigate,Navigate } from 'react-router-dom';
 function Bmi() {
 
   const saved = localStorage.getItem("user");
- 
-  // localStorage.setItem('user', JSON.stringify(input));
   const initial = JSON.parse(saved);
-  var gender = initial.gender
-  var weight = parseInt(initial.weight)
-  var height = parseInt(initial.height)/100
-  var bmi = weight/Math.pow(height,2)
+  const navigate = useNavigate()
+  //-------------------------------- ยังใช้ไม่ได้
+  
+  try{
+    var gender = initial.gender
+    var weight = parseInt(initial.weight)
+    var height = parseInt(initial.height)/100
+    var bmi = weight/Math.pow(height,2)
+  }
+  catch(e){
+    navigate("#/Home")
+    window.location.reload();
+  }
   var status = ''
   var today = new Date();
   var dd = String(today.getDate()).padStart(2, '0');
   var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
   var yyyy = today.getFullYear();
   
+  const dbref = ref(db)
   
+  // useEffect(()=>{
+  //   console.log(saved)
+  //   
+  // },[])
   if(bmi < 18.5){
-    status = "น้ำหนักต่ำกว่าเกณ"
+    status = "น้ำหนักต่ำกว่าเกณฑ์"
   }
   else if(bmi >= 18.5 && bmi < 23){
     status = "สมส่วน"
@@ -35,21 +52,34 @@ function Bmi() {
     status = "โรคอ้วนอันตราย"
   }
   return (
-    <div>
+    <div className='maxdiv'>
       <div className="header">
-        {/* <h1>คำนวณหาค่าดัชนีมวลกาย (BMI)</h1> */}
         <h1>ข้อมูลของผู้ใช้</h1>
       </div>
       <Container>
-        {/* <h1 className="data">ข้อมูลของผู้ใช้</h1> */}
         <div className="detail">
-          <p>Email : {initial.email}</p>
-          <p>Gender : {gender}</p>
-          <p>Weight : {initial.weight} kg</p>
-          <p>Height : {initial.height} cm</p>
-          <p>Bmi : {bmi}</p>
-          <p>คุณอยู่ในเกณฑ์ : {status}</p>
+          <h2>BMI</h2>
+          <p>อยู่ในเกณฑ์ : {status}</p>
+          <h3>{bmi.toFixed(2)}</h3>
+          {gender=="Male" && 
+                <img src={boy} className="Pic"/>
+              }
+              {gender=="Female" &&
+                <img src={girl} className="Pic"/>
+              }
         </div>
+          <div className="bigbox">
+          <div className="box">
+              <p>Weight : {initial.weight} kg</p>
+              <p>Height : {initial.height} cm</p>
+              
+            </div>
+            <div className="box">
+              <p>Email : {initial.email}</p>
+              <p>Gender : {gender}</p>
+            </div>
+            
+          </div>
       </Container>
     </div>
   );

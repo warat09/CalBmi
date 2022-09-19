@@ -5,8 +5,9 @@ import {Container} from 'reactstrap';
 import '../css/Home.css'
 import { useNavigate,Navigate } from 'react-router-dom';
 import { async } from '@firebase/util';
-import boy from '../images/boy.jpg'
-import girl from '../images/girl.jpg'
+import boy from '../images/boy.png'
+import girl from '../images/girl.png'
+import logo from '../images/logo.png'
 
 
 
@@ -19,6 +20,23 @@ function Home() {
   const[ar,setar] = useState([])
   const arref = useRef(ar)
   const navigate = useNavigate()
+  useEffect(()=>{
+    // localStorage.clear()
+    const saved = localStorage.getItem("user");
+    const initial = JSON.parse(saved);
+    console.log(initial)
+    try{
+    if(initial.email!=null){
+      localStorage.clear()
+      navigate("/Bmi")
+      // window.location.reload();
+    }
+   }
+   catch(e){
+    console.log(e)
+   }
+    
+  },[])
   useEffect(()=>{
     arref.current = ar
     console.log(ar)
@@ -35,28 +53,43 @@ function Home() {
     if(input.email==="" || input.weight===0 || input.weight===0){
       alert("กรุณากรอกข้อมูลให้ครบ")
     }
-    else if(input.email==="1"){
-      navigate("/Bmi")
-    }
+    // else if(input.email==="1"){
+    //   e.target.reset()
+    //   navigate("/Bmi")
+    //   window.location.reload();
+    // }
     else{
       try{
         get(child(dbref,"email")).then((snapshot)=>{
           if(snapshot.exists()){
-            console.log(snapshot.val())
+            let dup =false
+            // console.log(snapshot.val())
             for(let i = 0;i<snapshot.val().length;i++){
-              temp.push(i)
+              temp.push(snapshot.val()[i])
+              console.log(mail==snapshot.val()[i])
+              if(mail==snapshot.val()[i]){
+                
+                dup=true
+                // console.log(dup)
+                break;
+              }
             }
-            console.log(temp)
             const num = temp.length
-            console.log(temp," : ",num)
-            update(ref(db,"email"),
-            {
-              [num]:mail
-            }).then(()=>{
+            if(dup==false){
+                update(ref(db,"email"),
+                {
+                [num]:mail
+                }).then(()=>{
+                e.target.reset()
+                navigate("/Bmi")
+                window.location.reload();
+              })
+            }
+            else{
               e.target.reset()
-              navigate("/Bmi")
-              window.location.reload();
-            })
+                navigate("/Bmi")
+                window.location.reload();
+            }
 
             
           }
@@ -85,7 +118,7 @@ function Home() {
   }
   const inputsHandler = (e) =>{
     setinput({...input,[e.target.name]: e.target.value });
-    console.log(e.target.value)
+    // console.log(e.target.value)
     e.preventDefault();
   }
 
@@ -101,8 +134,11 @@ function Home() {
       </div>
       <Container>
         <form onSubmit={handleSubmit}>
-            <div className="row pt-5 mx-auto">
-              <h1 className="Header">App Name</h1>
+            <div className="row mx-auto">
+              <img src={logo} style={{
+                width:350,
+                height:270,
+              }} className="Header"></img>
               <p className="Header2">กรุณากรองข้อมูลของคุณ</p>
               <div className="form-group pt-2 mx-auto text-center text-md-right" onChange={onChangeValue}>
                 <div className="gender">

@@ -16,6 +16,7 @@ function Mood() {
   const moodstate = localStorage.getItem("emo");
   const [moodlist,setMood] = useState("")
   const [state2,setstate2] = useState(0)
+  const [state3,setstate3] = useState(0)
   // const [state2,setstate2] = useState(0)
   const [text,setText] = useState("")
   const daystate = localStorage.getItem("ds");
@@ -38,14 +39,17 @@ function Mood() {
   }
   const handleclick=(pic)=>{
     setState(pic)
-    localStorage.setItem('emo',pic)
+    setstate3(1)
     setstate2(1)
   }
-  // console.log(moodstate)
   useEffect(()=>{
     setState(moodstate)
+    if(moodstate!=-1){
+      setstate2(2)
+    }
   },[])
   useEffect(()=>{
+
     if(State==0){
       setMood("หงุดหงิด")
       setText("หายหงุดหงิดบ้างแล้วรึยังนะ")
@@ -89,12 +93,13 @@ function Mood() {
             <textarea id="w3review" name="w3review" rows="4" cols="50" placeholder="ใส่เรื่องราวของคุณได้ที่นี่"
           ></textarea>
           <button onClick={()=>{
+            localStorage.setItem('emo',State)
             setstate2(2)
           }}>Ok</button>
         </div>
       }
       
-      {moodstate==-1 &&
+      {moodstate==-1&&state3==0 &&
                 <div className="emotionDiv">
           
                 <div className="Divpic">
