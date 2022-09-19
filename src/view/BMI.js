@@ -49,13 +49,11 @@ function Bmi() {
     status = "โรคอ้วนอันตราย"
   }
   return (
-    <div>
+    <div className='maxdiv'>
       <div className="header">
-        {/* <h1>คำนวณหาค่าดัชนีมวลกาย (BMI)</h1> */}
         <h1>ข้อมูลของผู้ใช้</h1>
       </div>
       <Container>
-        {/* <h1 className="data">ข้อมูลของผู้ใช้</h1> */}
         <div className="detail">
           <p>Email : {initial.email}</p>
           <p>Gender : {gender}</p>
