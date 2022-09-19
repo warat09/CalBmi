@@ -57,7 +57,10 @@ function Bmi() {
         <h1>ข้อมูลของผู้ใช้</h1>
       </div>
       <Container>
-        <div className="detail">
+        <div style={{
+          paddingBottom:100
+        }}>
+          <div className="detail">
           <h2>BMI</h2>
           <p>อยู่ในเกณฑ์ : {status}</p>
           <h3>{bmi.toFixed(2)}</h3>
@@ -67,7 +70,7 @@ function Bmi() {
               {gender=="Female" &&
                 <img src={girl} className="Pic"/>
               }
-        </div>
+          </div>
           <div className="bigbox">
           <div className="box">
               <p>Weight : {initial.weight} kg</p>
@@ -80,6 +83,7 @@ function Bmi() {
             </div>
             
           </div>
+        </div>
       </Container>
     </div>
   );

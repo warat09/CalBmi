@@ -78,7 +78,10 @@ function Mood() {
       </div>
       <p className = "detailp">วันนี้คุณรู้สึกอย่างไรบ้าง</p>
       <Container>
-      {State>-1&&state2==2&&
+        <div style={{
+          paddingBottom:100
+        }}>
+        {State>-1&&state2==2&&
       <div className="BigPicDiv">
           <img src={moodlink[State]} className="BigPic"/>
           <p className = "detailp">{moodlist}</p>
@@ -135,6 +138,7 @@ function Mood() {
       
               </div>
       }
+        </div>
       </Container>
     </div>
   );

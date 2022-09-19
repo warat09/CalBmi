@@ -134,7 +134,7 @@ function Home() {
       </div>
       <Container>
         <form onSubmit={handleSubmit}>
-            <div className="row mx-auto">
+            <div className="row pb-5 mx-auto">
               <img src={logo} style={{
                 width:350,
                 height:270,
