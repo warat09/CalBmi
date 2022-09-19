@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/CalBmi/static/css/main.49b80d3b.css",
-    "main.js": "/CalBmi/static/js/main.e7a3c798.js",
+    "main.css": "/CalBmi/static/css/main.670d776b.css",
+    "main.js": "/CalBmi/static/js/main.cbb926bb.js",
     "static/js/787.bda1ff78.chunk.js": "/CalBmi/static/js/787.bda1ff78.chunk.js",
     "static/media/5.png": "/CalBmi/static/media/5.70a3d67f73542fb8c5d2.png",
+    "static/media/girl.png": "/CalBmi/static/media/girl.cc4abd2772fd9cbd3a15.png",
+    "static/media/boy.png": "/CalBmi/static/media/boy.b85ee951cfce5afa074a.png",
     "static/media/Bicyclecrunch.jpg": "/CalBmi/static/media/Bicyclecrunch.8ddaf11134f0b22c315b.jpg",
     "static/media/Mountainclimber.jpg": "/CalBmi/static/media/Mountainclimber.9a1e26c4689bea9b882e.jpg",
     "static/media/SitUp.jpg": "/CalBmi/static/media/SitUp.fb3bed36cb1331814918.jpg",
-    "static/media/boy.jpg": "/CalBmi/static/media/boy.4988e72184b554fa7d4d.jpg",
     "static/media/v-ups.jpg": "/CalBmi/static/media/v-ups.d37384026881f75b2018.jpg",
     "static/media/Plank.jpg": "/CalBmi/static/media/Plank.8e6cee16f6ff61e51076.jpg",
     "static/media/fruit.png": "/CalBmi/static/media/fruit.a5f4404a232062ab1359.png",
     "static/media/fish.png": "/CalBmi/static/media/fish.029d8d5021207d7ad393.png",
     "static/media/logo.png": "/CalBmi/static/media/logo.13643a035e2d59be3126.png",
-    "static/media/girl.jpg": "/CalBmi/static/media/girl.309738ace105d22ff6fd.jpg",
     "static/media/pork.png": "/CalBmi/static/media/pork.211950b9bf2b3db58386.png",
     "static/media/Vegetable.png": "/CalBmi/static/media/Vegetable.b44f8cc68ccd075e58a3.png",
     "static/media/egg.png": "/CalBmi/static/media/egg.bafc25007b2225501da6.png",
@@ -28,12 +28,12 @@
     "static/media/water3.png": "/CalBmi/static/media/water3.82cec84de01955267200.png",
     "static/media/water2.png": "/CalBmi/static/media/water2.4bb59db136b36aeb8997.png",
     "index.html": "/CalBmi/index.html",
-    "main.49b80d3b.css.map": "/CalBmi/static/css/main.49b80d3b.css.map",
-    "main.e7a3c798.js.map": "/CalBmi/static/js/main.e7a3c798.js.map",
+    "main.670d776b.css.map": "/CalBmi/static/css/main.670d776b.css.map",
+    "main.cbb926bb.js.map": "/CalBmi/static/js/main.cbb926bb.js.map",
     "787.bda1ff78.chunk.js.map": "/CalBmi/static/js/787.bda1ff78.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.49b80d3b.css",
-    "static/js/main.e7a3c798.js"
+    "static/css/main.670d776b.css",
+    "static/js/main.cbb926bb.js"
   ]
 }
