@@ -41,11 +41,14 @@ function Mood() {
     localStorage.setItem('emo',pic)
     setstate2(1)
   }
-  // console.log(moodstate)
   useEffect(()=>{
     setState(moodstate)
+    if(moodstate!=-1){
+      setstate2(2)
+    }
   },[])
   useEffect(()=>{
+
     if(State==0){
       setMood("หงุดหงิด")
       setText("หายหงุดหงิดบ้างแล้วรึยังนะ")

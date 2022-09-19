@@ -20,6 +20,23 @@ function Home() {
   const arref = useRef(ar)
   const navigate = useNavigate()
   useEffect(()=>{
+    localStorage.clear()
+    const saved = localStorage.getItem("user");
+    const initial = JSON.parse(saved);
+    console.log(initial)
+    try{
+    if(initial.email!=null){
+      localStorage.clear()
+      navigate("/Bmi")
+      // window.location.reload();
+    }
+   }
+   catch(e){
+    console.log(e)
+   }
+    
+  },[])
+  useEffect(()=>{
     arref.current = ar
     console.log(ar)
   },[ar])
@@ -36,7 +53,9 @@ function Home() {
       alert("กรุณากรอกข้อมูลให้ครบ")
     }
     else if(input.email==="1"){
+      e.target.reset()
       navigate("/Bmi")
+      window.location.reload();
     }
     else{
       try{
@@ -46,9 +65,9 @@ function Home() {
             for(let i = 0;i<snapshot.val().length;i++){
               temp.push(i)
             }
-            console.log(temp)
+            // console.log(temp)
             const num = temp.length
-            console.log(temp," : ",num)
+            // console.log(temp," : ",num)
             update(ref(db,"email"),
             {
               [num]:mail
@@ -85,7 +104,7 @@ function Home() {
   }
   const inputsHandler = (e) =>{
     setinput({...input,[e.target.name]: e.target.value });
-    console.log(e.target.value)
+    // console.log(e.target.value)
     e.preventDefault();
   }
 

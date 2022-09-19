@@ -1,24 +1,38 @@
 import React from 'react'
 import {Container} from 'reactstrap';
 import '../css/BMI.css'
-
+import {ref,set,get,child,onValue,update} from "firebase/database"
+import { useEffect } from 'react';
+import db from '../utils/firebase';
+import { useNavigate,Navigate } from 'react-router-dom';
 function Bmi() {
 
   const saved = localStorage.getItem("user");
- 
-  // localStorage.setItem('user', JSON.stringify(input));
   const initial = JSON.parse(saved);
-  var gender = initial.gender
-  var weight = parseInt(initial.weight)
-  var height = parseInt(initial.height)/100
-  var bmi = weight/Math.pow(height,2)
+  const navigate = useNavigate()
+  //-------------------------------- ยังใช้ไม่ได้
+  try{
+    var gender = initial.gender
+    var weight = parseInt(initial.weight)
+    var height = parseInt(initial.height)/100
+    var bmi = weight/Math.pow(height,2)
+  }
+  catch(e){
+    navigate("/")
+    window.location.reload();
+  }
   var status = ''
   var today = new Date();
   var dd = String(today.getDate()).padStart(2, '0');
   var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
   var yyyy = today.getFullYear();
   
+  const dbref = ref(db)
   
+  // useEffect(()=>{
+  //   console.log(saved)
+  //   
+  // },[])
   if(bmi < 18.5){
     status = "น้ำหนักต่ำกว่าเกณ"
   }
