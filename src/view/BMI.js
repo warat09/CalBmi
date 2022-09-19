@@ -18,8 +18,8 @@ function Bmi() {
     var bmi = weight/Math.pow(height,2)
   }
   catch(e){
-    navigate("/")
-    window.location.reload();
+    navigate("http://localhost:3000/CalBmi/")
+    // window.location.reload();
   }
   var status = ''
   var today = new Date();

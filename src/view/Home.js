@@ -53,30 +53,43 @@ function Home() {
     if(input.email==="" || input.weight===0 || input.weight===0){
       alert("กรุณากรอกข้อมูลให้ครบ")
     }
-    else if(input.email==="1"){
-      e.target.reset()
-      navigate("/Bmi")
-      window.location.reload();
-    }
+    // else if(input.email==="1"){
+    //   e.target.reset()
+    //   navigate("/Bmi")
+    //   window.location.reload();
+    // }
     else{
       try{
         get(child(dbref,"email")).then((snapshot)=>{
           if(snapshot.exists()){
-            console.log(snapshot.val())
+            let dup =false
+            // console.log(snapshot.val())
             for(let i = 0;i<snapshot.val().length;i++){
-              temp.push(i)
+              temp.push(snapshot.val()[i])
+              console.log(mail==snapshot.val()[i])
+              if(mail==snapshot.val()[i]){
+                
+                dup=true
+                // console.log(dup)
+                break;
+              }
             }
-            // console.log(temp)
             const num = temp.length
-            // console.log(temp," : ",num)
-            update(ref(db,"email"),
-            {
-              [num]:mail
-            }).then(()=>{
+            if(dup==false){
+                update(ref(db,"email"),
+                {
+                [num]:mail
+                }).then(()=>{
+                e.target.reset()
+                navigate("/Bmi")
+                window.location.reload();
+              })
+            }
+            else{
               e.target.reset()
-              navigate("/Bmi")
-              window.location.reload();
-            })
+                navigate("/Bmi")
+                window.location.reload();
+            }
 
             
           }
