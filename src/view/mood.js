@@ -52,6 +52,7 @@ function Mood() {
       setstate2(2)
     }
     console.log(State," : ",state2)
+    console.log(moodstate)
     // State>-1&&state2==2
   },[])
   useEffect(()=>{
@@ -87,7 +88,7 @@ function Mood() {
         <div style={{
           paddingBottom:100
         }}>
-        {State>-1&&state2==2&&
+        {(State>-1&&state2==2)&&
       <div className="BigPicDiv">
           <img src={moodlink[State]} className="BigPic"/>
           <p className = "detailp">{moodlist}</p>

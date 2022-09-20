@@ -82,12 +82,15 @@ function App() {
 
         if(snapshot.exists()){
           for(let i = 0;i<snapshot.val().length;i++){
-              temp.push(snapshot.val()[i])
+              if(snapshot.val()[i].state==1){
+                temp.push(snapshot.val()[i].mail)
+              }
+              // console.log(snapshot.val()[i])
             }
 
             const email_to_use =temp.filter(distinct)
-            // console.log(date)
-            console.log(date2)
+            // console.log(email_to_use)
+            // console.log(date2)
             // console.log(checkwhitelist(initial.email))
             if(checkwhitelist(initial.email) && (date2==80000||date2==110000||date2==140000||date2==170000||date2==200000)){
               for(let i =0;i<email_to_use.length;i++){

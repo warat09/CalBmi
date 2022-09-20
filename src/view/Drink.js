@@ -10,7 +10,7 @@ import Drinkcss from './../css/Drinkcss.css'
 import ms from './../utils/firebase'
 import {Container} from 'reactstrap';
 import db from '../utils/firebase';
-import {ref,set,get,child,onValue,update} from "firebase/database"
+import {ref,set,get,child,onValue,update, push} from "firebase/database"
 function Drink() {
     const saved = localStorage.getItem("user");
     const initial = JSON.parse(saved);
@@ -18,15 +18,16 @@ function Drink() {
     if(initial == null){
       window.location.href = "https://warat09.github.io/CalBmi"
     }
+
     var firsttime = new Date(Date.now());
     const [date, setDate] = useState(firsttime.getHours() + ":" +firsttime.getMinutes() + ":" +firsttime.getSeconds());
     const [date2,setdate2] = useState(parseInt(date.split(":")[0].concat(date.split(":")[1].concat(date.split(":")[2]))))
     const [sleep,setsleep] =useState(false)
     const [State,setState] = useState(0)
-
+    
 
     const [checked,setChecked] =useState(false)
-
+    
     function getRealTime() {
         const currentTime = Date.now();
         var d = new Date(currentTime)
@@ -55,7 +56,33 @@ function Drink() {
       }
        
     useEffect(() => {
-
+      get(child(dbref,"email")).then((snapshot)=>{
+        if(snapshot.exists()){
+          // console.log(snapshot.val())
+          for(let i = 0;i<snapshot.val().length;i++){
+              let m = snapshot.val()[i].mail
+              
+              if(m===initial.email){
+                // console.log(snapshot.val()[i])
+                // console.log(snapshot.val()[i].state)
+                if(snapshot.val()[i].state===1){
+                  setChecked(true)
+                  break;
+                }
+                else{
+                  setChecked(false)
+                  break;
+                }
+              }
+            }
+        }
+        else{
+          console.log("not found")
+          // return false
+        }
+      }).catch(er=>{
+          console.log(er)
+      })
         const timerID = setInterval(() => getRealTime(), 1000);
         return () => {
           clearInterval(timerID);
@@ -74,8 +101,7 @@ function Drink() {
       else if(date_temp>=80000){
         setsleep(false)
       }
-      // console.log(date2)
-      // console.log(date)
+
       if(date2===131500){
           console.log("hello")
           var templateParams = {
@@ -111,46 +137,68 @@ function Drink() {
       
     }
     useEffect(()=>{
-      console.log(checked)
-      console.log(initial.email)
+      // console.log(initial.email)
+      let postdata ={}
+      let index = 0;
+      if(checked==true){
+        get(child(dbref,"email")).then((snapshot)=>{
 
-      
-      // get(child(dbref,"email")).then((snapshot)=>{
+          if(snapshot.exists()){
+            for(let i = 0;i<snapshot.val().length;i++){
+                let m = snapshot.val()[i].mail
+                if(m===initial.email){
+                  index = i
+                  break;
+                }
+              }
+              postdata=snapshot.val()[index]
+              postdata.state=1
+              // console.log(postdata)
+              const newPostKey=push(child(dbref,'email')).key;
+              // console.log(newPostKey)
+              const updates={}
+              updates['/email/'+ index ]=postdata;
+              update(dbref,updates)
+              
+              // console.log(email_to_use)
+          }
+          else{
+            console.log("not found")
+          }
+        }).catch(er=>{
+            console.log(er)
+        })
+      }
+      else{
+        get(child(dbref,"email")).then((snapshot)=>{
 
-      //   if(snapshot.exists()){
-      //     for(let i = 0;i<snapshot.val().length;i++){
-      //         temp.push(snapshot.val()[i])
-      //       }
+          if(snapshot.exists()){
+            for(let i = 0;i<snapshot.val().length;i++){
+                let m = snapshot.val()[i].mail
+                if(m===initial.email){
+                  index = i
+                  break;
+                }
+              }
+              postdata=snapshot.val()[index]
+              postdata.state=0
+              // console.log(postdata)
+              const newPostKey=push(child(dbref,'email')).key;
+              // console.log(newPostKey)
+              const updates={}
+              updates['/email/'+ index ]=postdata;
+              update(dbref,updates)
+              
+              // console.log(email_to_use)
+          }
+          else{
+            console.log("not found")
+          }
+        }).catch(er=>{
+            console.log(er)
+        })
+      }
 
-      //       const email_to_use =temp.filter(distinct)
-      //       // console.log(date)
-      //       console.log(date2)
-      //       // console.log(checkwhitelist(initial.email))
-      //       if(checkwhitelist(initial.email) && (date2==80000||date2==110000||date2==140000||date2==170000||date2==200000)){
-      //         for(let i =0;i<email_to_use.length;i++){
-      //             console.log("hello")
-      //             var templateParams = {
-      //                 name: email_to_use[i],
-      //                 subject: 'ถึงเวลาดื่มน้ำแล้ว!',
-      //                 message:'ถึงเวลาดื่มน้ำแล้วเวลา : '+date +' นาฬิกา'
-      //               };
-      //             emailjs.send('service_9y5vii1', 'template_y5p8guz', templateParams, '0WTwQ785q4wjqSYDp')
-      //                 .then((result) => {
-      //                     console.log(result.text);
-      //                 }, (error) => {
-      //                     console.log(error.text);
-      //                });
-                
-      //         }
-      //       }
-      //   }
-      //   else{
-      //     console.log("not found")
-      //   }
-      // }).catch(er=>{
-      //     console.log(er)
-      // })
-      
     },[checked])
     const handlecheck = ()=>{
       setChecked(!checked)
@@ -201,6 +249,7 @@ function Drink() {
 
         }
         <div>
+          {/* {console.log(checked)} */}
           <input type="checkbox" className="checkbox" id="checkbox" checked={checked} onChange={handlecheck}></input>
           <p className="textcheckbox">กดติ๊กที่นี่เพื่อรับการแจ้งเตือน</p>
         </div>
