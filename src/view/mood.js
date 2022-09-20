@@ -56,8 +56,8 @@ function Mood() {
     if(moodstate!=-1){
       setstate2(2)
     }
-    console.log(State," : ",state2)
-    console.log(moodstate)
+    // console.log(State," : ",state2)
+    // console.log(moodstate)
     // State>-1&&state2==2
   },[])
   useEffect(()=>{
