@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/CalBmi/static/css/main.a0dca4f9.css",
-    "main.js": "/CalBmi/static/js/main.451f42f5.js",
+    "main.css": "/CalBmi/static/css/main.0911da59.css",
+    "main.js": "/CalBmi/static/js/main.0394fc11.js",
     "static/js/787.bda1ff78.chunk.js": "/CalBmi/static/js/787.bda1ff78.chunk.js",
     "static/media/5.png": "/CalBmi/static/media/5.70a3d67f73542fb8c5d2.png",
     "static/media/chicken6.jpg": "/CalBmi/static/media/chicken6.d17be6c0723dcd0fd8d4.jpg",
@@ -70,12 +70,12 @@
     "static/media/water3.png": "/CalBmi/static/media/water3.82cec84de01955267200.png",
     "static/media/water2.png": "/CalBmi/static/media/water2.4bb59db136b36aeb8997.png",
     "index.html": "/CalBmi/index.html",
-    "main.a0dca4f9.css.map": "/CalBmi/static/css/main.a0dca4f9.css.map",
-    "main.451f42f5.js.map": "/CalBmi/static/js/main.451f42f5.js.map",
+    "main.0911da59.css.map": "/CalBmi/static/css/main.0911da59.css.map",
+    "main.0394fc11.js.map": "/CalBmi/static/js/main.0394fc11.js.map",
     "787.bda1ff78.chunk.js.map": "/CalBmi/static/js/787.bda1ff78.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a0dca4f9.css",
-    "static/js/main.451f42f5.js"
+    "static/css/main.0911da59.css",
+    "static/js/main.0394fc11.js"
   ]
 }
