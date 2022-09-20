@@ -92,10 +92,11 @@ function Mood() {
       </div>
       }
       {state2===1&&
-        <div>
-            <textarea id="w3review" name="w3review" rows="4" cols="50" placeholder="ใส่เรื่องราวของคุณได้ที่นี่"
+        <div className="feeling">
+            <textarea className ="feelbox" id="w3review" name="w3review" rows="4" cols="50" placeholder="ใส่เรื่องราวของคุณได้ที่นี่"
           ></textarea>
-          <button onClick={()=>{
+          <br/>
+          <button className ="feelbut" onClick={()=>{
             localStorage.setItem('emo',State)
             setstate2(2)
           }}>Ok</button>

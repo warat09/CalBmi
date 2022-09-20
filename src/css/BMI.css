@@ -24,18 +24,18 @@ p{
     /* border-radius: 5px; */
     padding: 2.2rem;
     box-shadow: 1px 1px 2px 1px black;
-    font-size: 17.5px;
+    font-size: 3vw;
     color:black;
     /* margin: 5px 0px 0px 10px; */
     /* margin:auto; */
     margin:auto;
-    margin-top: 5.5rem;
+    margin-top:11vw;
     border-radius: 50%;
     /* display: block; */
     align-items: center;
     text-align: center;
-    width: 300px;
-    height: 300px;
+    width: 85vw;
+    height: 85vw;
     /* position: relative; */
 }
 .bigbox{
@@ -43,14 +43,16 @@ p{
     margin:auto;
     /* padding:5px; */
     position: relative;
-    padding-top: 15px;
+    padding-top: 15vw;
 }
 .box{
     margin:auto;
-    padding:10px;
-    border-radius: 5px ;
+    padding:2vw;
+    /* padding-top: 1; */
+    border-radius: 1vw ;
     border:0.8px solid black;
-    font-size:1em;
+    font-size:3.8vw;
+    /* bottom: 100; */
 }
 .Pic{
     width:55%;

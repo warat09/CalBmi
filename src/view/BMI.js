@@ -22,7 +22,7 @@ function Bmi() {
   }
   catch(e){
     navigate("#/Home")
-    window.location.reload();
+    // window.location.reload();
   }
   var status = ''
   var today = new Date();
@@ -61,7 +61,7 @@ function Bmi() {
           paddingBottom:100
         }}>
           <div className="detail">
-          <h2>BMI</h2>
+          <h1>BMI</h1>
           <p>อยู่ในเกณฑ์ : {status}</p>
           <h3>{bmi.toFixed(2)}</h3>
           {gender=="Male" && 
