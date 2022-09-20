@@ -68,9 +68,7 @@ function Home() {
               temp.push(snapshot.val()[i])
               // console.log(snapshot.val()[i].mail)
               if(mail==snapshot.val()[i].mail){
-                
                 dup=true
-                // console.log(dup)
                 break;
               }
             }

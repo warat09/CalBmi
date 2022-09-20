@@ -9,9 +9,12 @@ import water1 from './../images/water1.png'
 import Drinkcss from './../css/Drinkcss.css'
 import ms from './../utils/firebase'
 import {Container} from 'reactstrap';
+import db from '../utils/firebase';
+import {ref,set,get,child,onValue,update} from "firebase/database"
 function Drink() {
     const saved = localStorage.getItem("user");
     const initial = JSON.parse(saved);
+    const dbref = ref(db)
     if(initial == null){
       window.location.href = "https://warat09.github.io/CalBmi"
     }
@@ -20,6 +23,9 @@ function Drink() {
     const [date2,setdate2] = useState(parseInt(date.split(":")[0].concat(date.split(":")[1].concat(date.split(":")[2]))))
     const [sleep,setsleep] =useState(false)
     const [State,setState] = useState(0)
+
+
+    const [checked,setChecked] =useState(false)
 
     function getRealTime() {
         const currentTime = Date.now();
@@ -58,11 +64,14 @@ function Drink() {
       }, []);
     useEffect(()=>{
       setdate2(parseInt(date.split(":")[0].concat(date.split(":")[1].concat(date.split(":")[2]))))
-      if((date2>=200001&&date2<240000)||(date2>=0&&date2<80000)){
+      // console.log("first date2 :",parseInt(date.split(":")[0].concat(date.split(":")[1].concat(date.split(":")[2]))))
+      let date_temp = parseInt(date.split(":")[0].concat(date.split(":")[1].concat(date.split(":")[2])))
+
+      if((date_temp>=200001&&date_temp<240000)||(date_temp>=0&&date_temp<80000)){
         // console.log(date2)
         setsleep(true)
       }
-      else if(date2>=80000){
+      else if(date_temp>=80000){
         setsleep(false)
       }
       // console.log(date2)
@@ -99,6 +108,52 @@ function Drink() {
           return "11:00:00"
         }
           
+      
+    }
+    useEffect(()=>{
+      console.log(checked)
+      console.log(initial.email)
+
+      
+      // get(child(dbref,"email")).then((snapshot)=>{
+
+      //   if(snapshot.exists()){
+      //     for(let i = 0;i<snapshot.val().length;i++){
+      //         temp.push(snapshot.val()[i])
+      //       }
+
+      //       const email_to_use =temp.filter(distinct)
+      //       // console.log(date)
+      //       console.log(date2)
+      //       // console.log(checkwhitelist(initial.email))
+      //       if(checkwhitelist(initial.email) && (date2==80000||date2==110000||date2==140000||date2==170000||date2==200000)){
+      //         for(let i =0;i<email_to_use.length;i++){
+      //             console.log("hello")
+      //             var templateParams = {
+      //                 name: email_to_use[i],
+      //                 subject: 'ถึงเวลาดื่มน้ำแล้ว!',
+      //                 message:'ถึงเวลาดื่มน้ำแล้วเวลา : '+date +' นาฬิกา'
+      //               };
+      //             emailjs.send('service_9y5vii1', 'template_y5p8guz', templateParams, '0WTwQ785q4wjqSYDp')
+      //                 .then((result) => {
+      //                     console.log(result.text);
+      //                 }, (error) => {
+      //                     console.log(error.text);
+      //                });
+                
+      //         }
+      //       }
+      //   }
+      //   else{
+      //     console.log("not found")
+      //   }
+      // }).catch(er=>{
+      //     console.log(er)
+      // })
+      
+    },[checked])
+    const handlecheck = ()=>{
+      setChecked(!checked)
       
     }
   return (
@@ -139,11 +194,16 @@ function Drink() {
           </div>
         }
         
-        {sleep==true&&
+        {sleep===true&&
           <div className='waterbottlediv'>
             <img src={water5} className='waterbottle' alt="logo"/>
           </div>
+
         }
+        <div>
+          <input type="checkbox" className="checkbox" id="checkbox" checked={checked} onChange={handlecheck}></input>
+          <p className="textcheckbox">กดติ๊กที่นี่เพื่อรับการแจ้งเตือน</p>
+        </div>
         
         
         
