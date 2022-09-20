@@ -12,6 +12,7 @@ function Bmi() {
   const saved = localStorage.getItem("user");
   const initial = JSON.parse(saved);
   const navigate = useNavigate()
+
   //-------------------------------- ยังใช้ไม่ได้
   
   try{
@@ -21,8 +22,7 @@ function Bmi() {
     var bmi = weight/Math.pow(height,2)
   }
   catch(e){
-    navigate("#/Home")
-    // window.location.reload();
+    window.location = "/"
   }
   var status = ''
   var today = new Date();
