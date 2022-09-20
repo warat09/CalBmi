@@ -47,7 +47,12 @@ function Mood() {
     setstate2(1)
   }
   useEffect(()=>{
-    setState(moodstate)
+    if(moodstate!==null){
+      setState(moodstate)
+    }
+    else{
+      setState(-1)
+    }
     if(moodstate!=-1){
       setstate2(2)
     }
