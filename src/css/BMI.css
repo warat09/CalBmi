@@ -22,9 +22,9 @@ p{
 .detail{
     background-color:rgba(186, 250, 228, 0.487);
     /* border-radius: 5px; */
-    padding: 2.2rem;
+    padding: 2.0rem;
     box-shadow: 1px 1px 2px 1px black;
-    font-size: 3vw;
+    font-size: 3.0vw;
     color:black;
     /* margin: 5px 0px 0px 10px; */
     /* margin:auto; */
@@ -34,9 +34,15 @@ p{
     /* display: block; */
     align-items: center;
     text-align: center;
-    width: 85vw;
-    height: 85vw;
+    width: 75vw;
+    height: 75vw;
+    
+    
     /* position: relative; */
+}
+h2 {
+    font-weight:bold;
+    
 }
 .bigbox{
     display:flex;
@@ -53,9 +59,11 @@ p{
     border:0.8px solid black;
     font-size:3.8vw;
     /* bottom: 100; */
+    background-color: #4152A5;
+    color: black;
 }
 .Pic{
-    width:55%;
+    width:30vw;
     /* margin-bottom: ; */
     /* position:absolute; */
     align-items: center;

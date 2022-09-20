@@ -61,15 +61,15 @@ function Bmi() {
           paddingBottom:100
         }}>
           <div className="detail">
-          <h1>BMI</h1>
-          <p>อยู่ในเกณฑ์ : {status}</p>
-          <h3>{bmi.toFixed(2)}</h3>
-          {gender=="Male" && 
-                <img src={boy} className="Pic"/>
-              }
-              {gender=="Female" &&
-                <img src={girl} className="Pic"/>
-              }
+            <h2>BMI</h2>
+            <p>อยู่ในเกณฑ์ : {status}</p>
+            <h3>{bmi.toFixed(2)}</h3>
+                {gender=="Male" && 
+                  <img src={boy} className="Pic"/>
+                }
+                {gender=="Female" &&
+                  <img src={girl} className="Pic"/>
+                }
           </div>
           <div className="bigbox">
           <div className="box">

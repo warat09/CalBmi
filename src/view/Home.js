@@ -27,7 +27,7 @@ function Home() {
     console.log(initial)
     try{
     if(initial.email!=null){
-      localStorage.clear()
+      // localStorage.clear()
       navigate("/Bmi")
       // window.location.reload();
     }
