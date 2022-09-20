@@ -10,6 +10,11 @@ import '../css/Exercise.css'
 
 
 function Exercise() {
+    const saved = localStorage.getItem("user");
+    const initial = JSON.parse(saved);
+    if(initial == null){
+      window.location.href = "https://warat09.github.io/CalBmi"
+    }
     
     const Ref = useRef(null);
     const Ref2 = useRef(null);

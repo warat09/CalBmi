@@ -11,19 +11,14 @@ function Bmi() {
 
   const saved = localStorage.getItem("user");
   const initial = JSON.parse(saved);
-  const navigate = useNavigate()
-
-  //-------------------------------- ยังใช้ไม่ได้
-  
-  try{
+  if(initial == null){
+    window.location.href = "https://warat09.github.io/CalBmi"
+  }
     var gender = initial.gender
     var weight = parseInt(initial.weight)
     var height = parseInt(initial.height)/100
     var bmi = weight/Math.pow(height,2)
-  }
-  catch(e){
-    window.location = "/"
-  }
+  
   var status = ''
   var today = new Date();
   var dd = String(today.getDate()).padStart(2, '0');

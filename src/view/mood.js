@@ -26,7 +26,11 @@ function Mood() {
   var yyyy = today.getFullYear();
   today = mm + '/' + dd + '/' + yyyy;
   // today +="1"
-
+  const saved = localStorage.getItem("user");
+  const initial = JSON.parse(saved);
+  if(initial == null){
+    window.location.href = "https://warat09.github.io/CalBmi"
+  }
   if(daystate===null){
     localStorage.setItem('ds', today);
     localStorage.setItem('emo',-1)

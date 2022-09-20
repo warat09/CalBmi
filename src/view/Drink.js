@@ -11,6 +11,10 @@ import ms from './../utils/firebase'
 import {Container} from 'reactstrap';
 function Drink() {
     const saved = localStorage.getItem("user");
+    const initial = JSON.parse(saved);
+    if(initial == null){
+      window.location.href = "https://warat09.github.io/CalBmi"
+    }
     var firsttime = new Date(Date.now());
     const [date, setDate] = useState(firsttime.getHours() + ":" +firsttime.getMinutes() + ":" +firsttime.getSeconds());
     const [date2,setdate2] = useState(parseInt(date.split(":")[0].concat(date.split(":")[1].concat(date.split(":")[2]))))

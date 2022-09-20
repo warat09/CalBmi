@@ -6,6 +6,11 @@ import '../css/Food.css'
 
 function Food() {
   const navigate = useNavigate()
+  const saved = localStorage.getItem("user");
+  const initial = JSON.parse(saved);
+  if(initial == null){
+    window.location.href = "https://warat09.github.io/CalBmi"
+  }
   const article = (path) =>{
     navigate(`/${path}`)
   }
