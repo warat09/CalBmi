@@ -71,17 +71,19 @@ function Bmi() {
                   <img src={girl} className="Pic"/>
                 }
           </div>
-          <div className="bigbox">
-          <div className="box">
-              <p>Weight : {initial.weight} kg</p>
-              <p>Height : {initial.height} cm</p>
+          <div className='boxcenter'>
+            <div className="bigbox">
+            <div className="box">
+                <p>Weight : {initial.weight} kg</p>
+                <p>Height : {initial.height} cm</p>
+                
+              </div>
+              <div className="box">
+                <p>Email : {initial.email}</p>
+                <p>Gender : {gender}</p>
+              </div>
               
             </div>
-            <div className="box">
-              <p>Email : {initial.email}</p>
-              <p>Gender : {gender}</p>
-            </div>
-            
           </div>
         </div>
       </Container>

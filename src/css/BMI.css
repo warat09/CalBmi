@@ -30,7 +30,7 @@ p{
     /* margin: 5px 0px 0px 10px; */
     /* margin:auto; */
     margin:auto;
-    margin-top:11vw;
+    margin-top: 3.5rem;
     border-radius: 50%;
     align-items: center;
     text-align: center;
@@ -41,16 +41,12 @@ p{
     
     position: relative;
 }
-h2 {
-    font-weight:bold;
-    
-}
 .bigbox{
-    display:flex;
+    display: flex;
     margin:auto;
     /* padding:5px; */
     position: relative;
-    padding-top: 15vw;
+    padding-top: 45px;
 }
 .box{
     margin:auto;
@@ -67,6 +63,13 @@ h2 {
     background-color: #4152A5;
     color: rgb(255, 255, 255);
 }
+
+.boxcenter{
+    display: flex;
+    align-items: center;
+
+}
+
 .Pic{
     width:35vw;
     /* margin-bottom: 100vw; */
@@ -77,4 +80,31 @@ h2 {
     top: 50%;
     /* left:50%; */
     /* transform: translate(-50%, -50%); */
+
+}
+@media only screen and (max-width: 767px) {
+    .detail{
+        width: 25.5rem;
+        height: 25rem;
+    }
+    .box{
+        font-size:1.4rem;
+    }
+    
+}
+@media only screen and (max-width: 512px) {
+    .box{
+        font-size:1rem;
+    }
+   
+}
+@media only screen and (max-width: 438px) {
+    .detail{
+        width: 20.5rem;
+        height: 20rem;
+    }
+    .box{
+        font-size:0.9rem;
+    }
+    
 }
