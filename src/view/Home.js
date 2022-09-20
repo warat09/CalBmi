@@ -21,15 +21,12 @@ function Home() {
   const arref = useRef(ar)
   const navigate = useNavigate()
   useEffect(()=>{
-    localStorage.clear()  
     const saved = localStorage.getItem("user");
     const initial = JSON.parse(saved);
     console.log(initial)
     try{
     if(initial.email!=null){
-      // localStorage.clear()
       navigate("/Bmi")
-      // window.location.reload();
     }
    }
    catch(e){
