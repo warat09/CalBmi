@@ -21,7 +21,7 @@ function Home() {
   const arref = useRef(ar)
   const navigate = useNavigate()
   useEffect(()=>{
-    // localStorage.clear()
+    localStorage.clear()  
     const saved = localStorage.getItem("user");
     const initial = JSON.parse(saved);
     console.log(initial)
@@ -66,8 +66,8 @@ function Home() {
             // console.log(snapshot.val())
             for(let i = 0;i<snapshot.val().length;i++){
               temp.push(snapshot.val()[i])
-              console.log(mail==snapshot.val()[i])
-              if(mail==snapshot.val()[i]){
+              // console.log(snapshot.val()[i].mail)
+              if(mail==snapshot.val()[i].mail){
                 
                 dup=true
                 // console.log(dup)
@@ -78,11 +78,11 @@ function Home() {
             if(dup==false){
                 update(ref(db,"email"),
                 {
-                [num]:mail
+                  [num]:{mail:mail,state:0}
                 }).then(()=>{
-                e.target.reset()
-                navigate("/Bmi")
-                window.location.reload();
+                  e.target.reset()
+                  navigate("/Bmi")
+                  window.location.reload();
               })
             }
             else{
@@ -97,7 +97,7 @@ function Home() {
             console.log("not found")
             update(ref(db,"email"),
             {
-              0:mail
+             0:{mail:mail,state:0}
             })
             .then(()=>{
               e.target.reset()

@@ -14,6 +14,7 @@
 }
 p{
     size: 0.5 rem;
+    /* size :15vw; */
 }
 .maxdiv{
     height: auto;
@@ -31,7 +32,6 @@ p{
     margin:auto;
     margin-top: 3.5rem;
     border-radius: 50%;
-    /* display: block; */
     align-items: center;
     text-align: center;
     width: 40rem;
