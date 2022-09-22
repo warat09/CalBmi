@@ -23,7 +23,7 @@ function Fish() {
           <div className="card">
               <img src={fish2} alt="" />
               <div className="card-body">
-                <h2>เมี่ยงปลาเผ่า 150 kcal</h2>
+                <h2>เมี่ยงปลาเผา 150 kcal</h2>
               </div>
           </div>
           <div className="card">

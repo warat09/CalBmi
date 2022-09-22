@@ -248,7 +248,9 @@ function Drink() {
           </div>
 
         }
-        <div>
+        <div style={{
+          paddingBottom:70
+        }}>
           {/* {console.log(checked)} */}
           <input type="checkbox" className="checkbox" id="checkbox" checked={checked} onChange={handlecheck}></input>
           <p className="textcheckbox">กดติ๊กที่นี่เพื่อรับการแจ้งเตือน</p>

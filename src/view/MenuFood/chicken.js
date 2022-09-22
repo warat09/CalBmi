@@ -22,7 +22,7 @@ function Chicken() {
           <div className="card">
               <img src={chicken2} alt="" />
               <div className="card-body">
-                <h2>เกะเพราไก่  573 kcal</h2>
+                <h2>ผัดกะเพรา 573 kcal</h2>
               </div>
           </div>
           <div className="card">

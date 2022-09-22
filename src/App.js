@@ -102,7 +102,7 @@ function App() {
                       subject: 'ถึงเวลาดื่มน้ำแล้ว!',
                       message:'ถึงเวลาดื่มน้ำแล้วเวลา : '+date +' นาฬิกา'
                     };
-                  emailjs.send('service_9y5vii1', 'template_y5p8guz', templateParams, '0WTwQ785q4wjqSYDp')
+                  emailjs.send('service_732t9i1', 'template_t2frnua', templateParams, 'gST1VqKLgR68UZj2b')
                       .then((result) => {
                           console.log(result.text);
                       }, (error) => {
