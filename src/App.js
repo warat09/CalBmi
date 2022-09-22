@@ -30,7 +30,7 @@ function App() {
   const [date, setDate] = useState(firsttime.getHours() + ":" +firsttime.getMinutes() + ":" +firsttime.getSeconds());
   const [date2,setdate2] = useState(parseInt(date.split(":")[0].concat(date.split(":")[1].concat(date.split(":")[2]))))
   //----------------------------------------
-  const whitelist = ["earthgodna@gmail.com"]
+  const whitelist = ["earthgodna@gmail.com","healthydiary.08@gmail.com"]
   useEffect(() => {
     const timerID = setInterval(() => getRealTime(), 1000);
     return () => {

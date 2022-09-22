@@ -23,7 +23,7 @@ function Home() {
   useEffect(()=>{
     const saved = localStorage.getItem("user");
     const initial = JSON.parse(saved);
-    console.log(initial)
+    // console.log(initial)
     try{
     if(initial.email!=null){
       navigate("/Bmi")
@@ -36,7 +36,7 @@ function Home() {
   },[])
   useEffect(()=>{
     arref.current = ar
-    console.log(ar)
+    // console.log(ar)
   },[ar])
 
   const handleSubmit  = (e) => {
