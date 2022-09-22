@@ -15,30 +15,42 @@ function Egg() {
         <h1>เมนูไข่</h1>
       </div>
       <Container>
-        <img src={egg1} style={{
-          width:400
+        <img src={egg1} className="row pt-4 mx-auto" style={{
+          width:350,
         }}></img>
-        <p>ประโยชน์ มีสารอาหารที่สำคัญสำหรับสุขภาพยังประกอบไปด้วย โคลีน และ ลูทีน และยังมีบทบาทในการควบคุมน้ำหนัก ความแข็งแรงของกล้ามเนื้อ การตั้งครรภ์ที่มีคุณภาพ การทำงานของสมอง สุขภาพของดวงตาและอื่น ๆ อีกมากมาย</p>
-        <img src={egg2} style={{
-          width:400
-        }}></img>
-        <p>โจ๊กไข่ขาว 78 kcal</p>
-        <img src={egg3} style={{
-          width:400
-        }}></img>
-        <p>ต้มจืดไข่น้ำ 294 kcal</p>
-        <img src={egg4} style={{
-          width:400
-        }}></img>
-        <p>บวบผัดไข่ 210 kcal</p>
-        <img src={egg5} style={{
-          width:400
-        }}></img>
-        <p>ฟักทองผัดไข่ 255 kcal</p>
-        <img src={egg6} style={{
-          width:400
-        }}></img>
-        <p>ไข่ตุ๋น 120 kcal</p> 
+        <p className="pt-4 ">ประโยชน์ มีสารอาหารที่สำคัญสำหรับสุขภาพยังประกอบไปด้วย โคลีน และ ลูทีน และยังมีบทบาทในการควบคุมน้ำหนัก ความแข็งแรงของกล้ามเนื้อ การตั้งครรภ์ที่มีคุณภาพ การทำงานของสมอง สุขภาพของดวงตาและอื่น ๆ อีกมากมาย</p>
+        <div className="cards pt-2">
+          <div className="card">
+              <img src={egg2} alt="" />
+              <div className="card-body">
+                <h2>โจ๊กไข่ขาว 78 kcal</h2>
+              </div>
+          </div>
+          <div className="card">
+              <img src={egg3} alt="" />
+              <div className="card-body">
+                <h2>ต้มจืดไข่น้ำ 294 kcal</h2>
+              </div>
+          </div>
+          <div className="card">
+              <img src={egg4} alt="" />
+              <div className="card-body">
+                <h2>ฟักทองผัดไข่ 255 kcal</h2>
+              </div>
+          </div>
+          <div className="card">
+              <img src={egg5} alt="" />
+              <div className="card-body">
+                <h2>ฟักทองผัดไข่ 255 kcal</h2>
+              </div>
+          </div>
+          <div className="card">
+              <img src={egg6} alt="" />
+              <div className="card-body">
+                <h2>ไข่ตุ๋น 120 kcal</h2>
+              </div>
+          </div>
+        </div> 
       </Container>
     </div>
   );

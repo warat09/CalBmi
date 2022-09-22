@@ -15,30 +15,42 @@ function Fruit() {
         <h1>เมนูผลไม้</h1>
       </div>
       <Container>
-      <img src={fruit1} style={{
-          width:400
+        <img src={fruit1} className="row pt-4 mx-auto" style={{
+          width:350,
         }}></img>
-        <p>ประโยชน์ผลไม้ : ผลไม้มีกากใยอาหารและวิตามิน เกลือแร่ที่มีประโยชน์ต่อร่างกายอยู่มากมาย อีกทั้งน้ำและกากใยในผลไม้ช่วยในการขับถ่ายของเสียออกจากร่างกาย จึงช่วยลดน้ำหนักได้</p>
-        <img src={fruit2} style={{
-          width:400
-        }}></img>
-        <p>กล้วยน้ำหว้า 88.7 kcal /100g</p>
-        <img src={fruit3} style={{
-          width:400
-        }}></img>
-        <p>มะละกอ 42.8 kcal/100g</p>
-        <img src={fruit4} style={{
-          width:400
-        }}></img>
-        <p>แก้วมังกร 66 kcal/100g</p>
-        <img src={fruit5} style={{
-          width:400
-        }}></img>
-        <p>ฝรั่ง 68.1 kcal /100g</p>
-        <img src={fruit6} style={{
-          width:400
-        }}></img>
-        <p>ส้ม 47.1 kcal/100g</p>
+        <p className="pt-4 ">ประโยชน์ผลไม้ : ผลไม้มีกากใยอาหารและวิตามิน เกลือแร่ที่มีประโยชน์ต่อร่างกายอยู่มากมาย อีกทั้งน้ำและกากใยในผลไม้ช่วยในการขับถ่ายของเสียออกจากร่างกาย จึงช่วยลดน้ำหนักได้</p>
+        <div className="cards pt-2">
+          <div className="card">
+              <img src={fruit2} alt="" />
+              <div className="card-body">
+                <h2>กล้วยน้ำหว้า 88.7 kcal /100g</h2>
+              </div>
+          </div>
+          <div className="card">
+              <img src={fruit3} alt="" />
+              <div className="card-body">
+                <h2>มะละกอ 42.8 kcal/100g</h2>
+              </div>
+          </div>
+          <div className="card">
+              <img src={fruit4} alt="" />
+              <div className="card-body">
+                <h2>แก้วมังกร 66 kcal/100g</h2>
+              </div>
+          </div>
+          <div className="card">
+              <img src={fruit5} alt="" />
+              <div className="card-body">
+                <h2>ฝรั่ง 68.1 kcal /100g</h2>
+              </div>
+          </div>
+          <div className="card">
+              <img src={fruit6} alt="" />
+              <div className="card-body">
+                <h2>ส้ม 47.1 kcal/100g</h2>
+              </div>
+          </div>
+        </div>
       </Container>
     </div>
   );

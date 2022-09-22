@@ -8,7 +8,6 @@ import boy from '../images/boy.png'
 import girl from '../images/girl.png'
 import { useNavigate,Navigate } from 'react-router-dom';
 function Bmi() {
-
   const saved = localStorage.getItem("user");
   const initial = JSON.parse(saved);
   if(initial == null){

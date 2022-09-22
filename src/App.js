@@ -75,6 +75,8 @@ function App() {
     return false
   }
   useEffect(()=>{
+    document.title = "Healthy Diary"
+    document.body.style.backgroundImage = "url('bg.jpg')";
     setdate2(parseInt(date.split(":")[0].concat(date.split(":")[1].concat(date.split(":")[2]))))
     if(initial!=null){
       // console.log(date)
@@ -118,11 +120,6 @@ function App() {
       })
     }
   },[date])
-  useEffect(() => {
-    // change background color with a random color
-    document.title = "Healthy Diary"
-    document.body.style.background = "#eef4f9";
-  });
   
   return (
     <div className = "app">

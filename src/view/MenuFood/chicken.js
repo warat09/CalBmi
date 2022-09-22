@@ -14,30 +14,42 @@ function Chicken() {
         <h1>เมนูไก่</h1>
       </div>
       <Container>
-      <img src={chicken1} style={{
-          width:400
+      <img src={chicken1} className="row pt-4 mx-auto" style={{
+          width:350,
         }}></img>
-        <p>ประโยชน์ : ไก่เป็นแหล่งโปรตีนที่สำคัญมาก มีไขมันต่ำที่ดีต่อสุขภาพมาก ซึ่งโปรตีนในเนื้อไก่นั้นมีประโยชน์ต่อการสร้างกล้ามเนื้อ เพิ่มความแข็งแรงของกระดูก และสามารถช่วยลดน้ำหนักด้วย</p>
-        <img src={chicken2} style={{
-          width:400
-        }}></img>
-        <p>เกะเพราไก่  573 kcal</p>
-        <img src={chicken3} style={{
-          width:400
-        }}></img>
-        <p>ต้มยำไก่ 395.4 kcal</p>
-        <img src={chicken4} style={{
-          width:400
-        }}></img>
-        <p>ไก่ผัดขิง 225.4 kcal</p>
-        <img src={chicken5} style={{
-          width:400
-        }}></img>
-        <p>ราดหน้าผักรวมอกไก่  327 kcal</p>
-        <img src={chicken6} style={{
-          width:400
-        }}></img>
-        <p>ลาบอกไก่ 164 kcal</p>
+        <p className="pt-4 ">ประโยชน์ : ไก่เป็นแหล่งโปรตีนที่สำคัญมาก มีไขมันต่ำที่ดีต่อสุขภาพมาก ซึ่งโปรตีนในเนื้อไก่นั้นมีประโยชน์ต่อการสร้างกล้ามเนื้อ เพิ่มความแข็งแรงของกระดูก และสามารถช่วยลดน้ำหนักด้วย</p>
+        <div className="cards pt-2">
+          <div className="card">
+              <img src={chicken2} alt="" />
+              <div className="card-body">
+                <h2>เกะเพราไก่  573 kcal</h2>
+              </div>
+          </div>
+          <div className="card">
+              <img src={chicken3} alt="" />
+              <div className="card-body">
+                <h2>เต้มยำไก่ 395.4 kcal</h2>
+              </div>
+          </div>
+          <div className="card">
+              <img src={chicken4} alt="" />
+              <div className="card-body">
+                <h2>ไก่ผัดขิง 225.4 kcal</h2>
+              </div>
+          </div>
+          <div className="card">
+              <img src={chicken5} alt="" />
+              <div className="card-body">
+                <h2>ราดหน้าผักรวมอกไก่  327 kcal</h2>
+              </div>
+          </div>
+          <div className="card">
+              <img src={chicken6} alt="" />
+              <div className="card-body">
+                <h2>ลาบอกไก่ 164 kcal</h2>
+              </div>
+          </div>
+        </div>
       </Container>
     </div>
   );

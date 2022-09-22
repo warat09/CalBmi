@@ -15,30 +15,42 @@ function Vegetable() {
         <h1>เมนูผัก</h1>
       </div>
       <Container>
-      <img src={vegetable6} style={{
-          width:400
+        <img src={vegetable6} className="row pt-4 mx-auto" style={{
+          width:350,
         }}></img>
-        <p>ประโยชน์ผัก : เป็นแหล่งสะสมของวิตามินและแร่ธาตุหลายชนิด เป็นแหล่งใยอาหาร ช่วยลดการดูดซึมของคอเลสเตอรอลและไขมัน ช่วยทำให้ระบบย่อย ระบบขับถ่ายได้ดี</p>
-        <img src={vegetable2} style={{
-          width:400
-        }}></img>
-        <p>ผัดผักรวม 227.6 kcal</p>
-        <img src={vegetable3} style={{
-          width:400
-        }}></img>
-        <p>ต้มจับฉ่าย 15 kcal</p>
-        <img src={vegetable4} style={{
-          width:400
-        }}></img>
-        <p>น้ำพริกผักลวก 70 kcal</p>
-        <img src={vegetable5} style={{
-          width:400
-        }}></img>
-        <p>ผัดผักบุ้งไฟแดง 210 kcal</p>
-        <img src={vegetable1} style={{
-          width:400
-        }}></img>
-        <p>กะหล่ำปลีผัดน้ำปลา 90 kcal</p>
+        <p className="pt-4 ">ประโยชน์ผัก : เป็นแหล่งสะสมของวิตามินและแร่ธาตุหลายชนิด เป็นแหล่งใยอาหาร ช่วยลดการดูดซึมของคอเลสเตอรอลและไขมัน ช่วยทำให้ระบบย่อย ระบบขับถ่ายได้ดี</p>
+        <div className="cards pt-2">
+          <div className="card">
+              <img src={vegetable2} alt="" />
+              <div className="card-body">
+                <h2>ผัดผักรวม 227.6 kcal</h2>
+              </div>
+          </div>
+          <div className="card">
+              <img src={vegetable3} alt="" />
+              <div className="card-body">
+                <h2>ต้มจับฉ่าย 15 kcal</h2>
+              </div>
+          </div>
+          <div className="card">
+              <img src={vegetable4} alt="" />
+              <div className="card-body">
+                <h2>น้ำพริกผักลวก 70 kcal</h2>
+              </div>
+          </div>
+          <div className="card">
+              <img src={vegetable5} alt="" />
+              <div className="card-body">
+                <h2>ผัดผักบุ้งไฟแดง 210 kcal</h2>
+              </div>
+          </div>
+          <div className="card">
+              <img src={vegetable1} alt="" />
+              <div className="card-body">
+                <h2>กะหล่ำปลีผัดน้ำปลา 90 kcal</h2>
+              </div>
+          </div>
+        </div>
       </Container>
     </div>
   );
